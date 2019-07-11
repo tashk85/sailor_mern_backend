@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose");
 
-const NotificationSchema = ({
+const NotificationSchema = new Schema({
     type: Number,
     metadata: {
         first_name: String,
