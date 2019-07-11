@@ -15,7 +15,6 @@ const ArticleSchema = new Schema({
         url: String
     },
     comments: [CommentSchema],
-    //double check whether it's correctly referenced??? likes & interest schema are creatd as test.
     likes:[likesSchema],
     interest:[interestSchema]
 });
