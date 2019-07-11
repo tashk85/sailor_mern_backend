@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const CommentSchema = require("./comment_schema");
+const interestSchema = require("./interest_schema");
+const likesSchema = require("./likes_schema");
 const Schema = mongoose.Schema;
 
 const ArticleSchema = new Schema({
@@ -13,8 +15,9 @@ const ArticleSchema = new Schema({
         url: String
     },
     comments: [CommentSchema],
-    likes:[user_ids],
-    interest_tags:[String]
+    //double check whether it's correctly referenced??? likes & interest schema are creatd as test.
+    likes:[likesSchema],
+    interest:[interestSchema]
 });
 
 module.exports = ArticleSchema;

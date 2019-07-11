@@ -1,5 +1,6 @@
 const { Schema } = require("mongoose");
 const NotificationSchema = require("./notification_schema");
+const interestSchema = require("./interest_schema");
 
 const UserSchema = new Schema({
     first_name: {
@@ -27,7 +28,7 @@ const UserSchema = new Schema({
         type: String,
         trim: true
     },
-    interest_tags: [String],
+    interest: [interestSchema],
     notifications: [NotificationSchema]
 });
 

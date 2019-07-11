@@ -18,10 +18,12 @@
   "dependencies": {
     "celebrate": "^10.0.1",
     "connect-mongo": "^3.0.0",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
+    "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.6.4",
     "mongoose-bcrypt": "^1.6.0",

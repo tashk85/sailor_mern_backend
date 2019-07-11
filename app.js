@@ -6,6 +6,7 @@ const MongoStore = require('connect-mongo')(expressSession);
 const mongoose = require("mongoose");
 const methodOverride = require("method-override"); //let PUT & PATCH method override GET
 const passport = require("passport");
+const cookieParser = require("cookie-parser");
 const app = express();
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -29,6 +30,8 @@ app.use(express.json());
 require("./config/passport");
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(cookieParser());
 
 
 app.use(morgan("combined"));
