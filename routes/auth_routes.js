@@ -2,11 +2,12 @@ const express = require("express");
 const { celebrate, Joi } = require("celebrate");
 const passport = require("passport");
 const router = express.Router();
+const AuthController = require("./../controllers/auth_controller");
 
 // Shows Sign Up Form
-router.get("/signup", (req, res) => res.send("Sign Up")); //AuthController.registerNew
+router.get("/signup", AuthController.registerNew); //AuthController.registerNew
 
-router.post("/signup", (req, res) => res.send("You have signed Up")); //AuthController.registerCreate
+router.post("/signup", AuthController.registerCreate); //AuthController.registerCreate
 
 // Add LinkedIn OAuth routes
 

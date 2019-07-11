@@ -5,8 +5,17 @@ function registerNew(req, res) {
     res.render("authentication/signup");
 }
 
-function registerCreate(req, res) {
-    
+async function registerCreate(req, res, next) {
+    const { email, password, first_name,last_name } = req.body;
+    const user = await UserModel.create({ email, password, first_name,last_name });
+
+    req.login(user, (error)=>{
+        if (error) {
+            return next(error);
+        }
+
+        res.redirect("/user/interests");
+    });
 }
 
 
@@ -14,7 +23,7 @@ function registerCreate(req, res) {
 module.exports = {
     registerNew,
     registerCreate,
-    loginNew,
-    loginCreate,
-    logout
+    // loginNew,
+    // loginCreate,
+    // logout
 }
