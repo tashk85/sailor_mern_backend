@@ -7,20 +7,28 @@ function registerNew(req, res) {
     return res.render("authentications/signup");
 }
 
-function registerCreate(req, res, next) {
+async function registerCreate(req, res, next) {
     const { email, password, firstName,lastName } = req.body;
-    const user = new UserModel({ email, firstName,lastName });
-    UserModel.register(user, password, (err, user) => {
-        if (err) {
-            return next(new HTTPError(500, err.message));
+    const user = await UserModel.create({ email, password, firstName, lastName });
+    req.login(user,(error) => {
+        if (error) {
+            return next(error);
         }
-
         const token = JWTService.generateToken(user);
+        return res.json({ token }); 
+        // return res.redirect("user/interests");  
+    })   
+    // const user = new UserModel({ email, firstName,lastName });
+    // UserModel.register(user, password, (err, user) => {
+    //     if (err) {
+    //         return next(new HTTPError(500, err.message));
+    //     }
 
-        return res.json({ token });      
-    });
-    
-    return res.redirect("user/interests");  
+    //     const token = JWTService.generateToken(user);
+
+    //     return res.json({ token });      
+    // });
+
 }
 
 function logout(req,res) {
