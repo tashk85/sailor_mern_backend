@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const UserController = require("./../controllers/user_controller");
 
-// Interests Creation
+// Interests Creation for redux
 router.get("/interests", UserController.interestsNew); //UserController.interestsNew
 
 router.post("/:userid/interests", UserController.interestsCreate); //UserController.interestsCreate

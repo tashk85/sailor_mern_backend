@@ -19,7 +19,7 @@ app.use(expressSession({
     cookie: {
         expires: 600000
     },
-    store: new MongoStore({ mongooseConnection: mongoose.connection})
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
 
 app.use(methodOverride('_method', { methods: ['POST', 'GET']}));

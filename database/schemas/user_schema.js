@@ -3,12 +3,12 @@ const NotificationSchema = require("./notification_schema");
 const interestSchema = require("./interest_schema");
 
 const UserSchema = new Schema({
-    first_name: {
+    firstName: {
         type: String,
         required: true,
         trim: true
     },
-    last_name: {
+    lastName: {
         type: String,
         required: true,
         trim: true
@@ -24,7 +24,7 @@ const UserSchema = new Schema({
         trim: true,
         bcrypt: true
     },
-    linkedin_profile: {
+    linkedinProfile: {
         type: String,
         trim: true
     },

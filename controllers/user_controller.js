@@ -1,7 +1,7 @@
 const UserModel = require("./../database/models/user_model");
 
 function interestsNew (req, res) {
-    res.render("user/interest");
+    res.render("forms/interest_form");
 }
 
 async function interestsCreate(req, res) {

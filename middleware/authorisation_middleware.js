@@ -1,5 +1,5 @@
 function authRedirect(req, res, next) {
-    if (req.session && req.session.user) {
+    if (req.user) {
         return res.redirect("/feed");
     }
     return next();
@@ -7,7 +7,7 @@ function authRedirect(req, res, next) {
 
 
 function authorise(req, res, next) {
-    if (req.session && req.session.user) {
+    if (req.user) {
         return next();
     }
     return res.redirect("/auth/login");
