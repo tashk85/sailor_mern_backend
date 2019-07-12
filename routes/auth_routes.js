@@ -11,8 +11,8 @@ router.get("/signup", authRedirect, AuthController.registerNew);
 
 router.post("/signup", celebrate({
     body: {
-        firstName: Joi.string().firstName().required(),
-        lastName: Joi.string().lastName().required(),
+        firstName: Joi.string().required(),
+        lastName: Joi.string().required(),
         email: Joi.string().email().required(),
         password: Joi.string().required()
     }

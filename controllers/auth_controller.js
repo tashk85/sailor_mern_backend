@@ -34,7 +34,7 @@ function loginNew(req,res){
     return res.render("authentication/login");
 }
 
-function loginCreate(req,res) {
+async function loginCreate(req,res) {
 
     //regular login
     const { email, password } = req.body;
