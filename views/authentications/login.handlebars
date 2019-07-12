@@ -1,6 +1,12 @@
-<h1>Log In</h1>
+<h1>Login</h1>
 
-<form method="post" action="/auth/signup">
+
+{{#if error}}
+    <p><b>Error:</b> {{error}}</p>
+{{/if}}
+
+
+<form method="post" action="/auth/login">
     <div>
         <label>Email</label>
         <input type="text" name="email" />
@@ -9,8 +15,7 @@
         <label>Password</label>
         <input type="password" name="password" />
     </div>
-
     <div>
-        <input type="submit" value="Register" />
+        <input type="submit" value="Login" />
     </div>
 </form>

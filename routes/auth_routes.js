@@ -3,9 +3,10 @@ const { celebrate, Joi } = require("celebrate");
 const passport = require("passport");
 const router = express.Router();
 const AuthController = require("./../controllers/auth_controller");
+const { authRedirect } = require("./../middleware/authorisation_middleware");
 
 // Shows Sign Up Form --> Can remove this route when move to Redux in front-end
-router.get("/signup", AuthController.registerNew); //AuthController.registerNew
+router.get("/signup", authRedirect, AuthController.registerNew); //AuthController.registerNew
 
 
 router.post("/signup", celebrate({

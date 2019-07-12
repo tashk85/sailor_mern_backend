@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const interestSchema = new Schema({
     tag: {
         type: String,
-        enum: ['degisn', 'tech', 'react', 'ruby','javascript', 'all', 'none'],
+        enum: ['degisn', 'tech', 'react', 'javascript', 'all', 'none'],
         default: 'none'
     }
 });

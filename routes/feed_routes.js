@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const { authRedirect, authorise } = require("./../middleware/authorisation_middleware");
 
 // View Feed of Articles
 router.get("/", (req, res) => res.render("feed/feed")); // FeedController.index

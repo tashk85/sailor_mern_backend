@@ -10,15 +10,6 @@ function registerNew(req, res) {
 async function registerCreate(req, res, next) {
     const { email, password, first_name,last_name } = req.body;
     const user = new UserModel({ email, first_name,last_name  });
-    // const user = await UserModel.create({ email, first_name,last_name });
-
-    // req.login(user, (error)=>{
-    //     if (error) {
-    //         return next(error);
-    //     }
-
-    //     res.redirect("/user/interests");
-    // });
     UserModel.register(user, password, (err, user) => {
         if (err) {
             return next(new HTTPError(500, err.message));
@@ -34,7 +25,7 @@ async function registerCreate(req, res, next) {
 function logout(req,res) {
     req.logout();
     res.cookie("jwt", null, {maxAge: -1 });
-    res.redirect("/");
+    res.redirect("/auth/login");
 }
 
 //can remove this method when move to redux form
