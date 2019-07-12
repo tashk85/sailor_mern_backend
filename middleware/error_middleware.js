@@ -8,3 +8,4 @@ module.exports = function ValidationError(err, req, res, next ){
 
     next(err);
 }
+

@@ -27,13 +27,13 @@ router.get("/login", AuthController.loginNew); //AuthController.loginNew
 
 router.post("/login", celebrate({
     body: {
-        email: Joi.string().required(),
+        email: Joi.string().email().required(),
         password: Joi.string().required()
     }
 }),
     passport.authenticate('local', {
-        successRedirect: "/feed",
-        failureRedirect: "/auth/login",
+        // successRedirect: "/feed",
+        // failureRedirect: "/auth/login",
         session: false
     }), AuthController.loginCreate
 ); 
