@@ -24,6 +24,7 @@ passport.use(new LocalStrategy({
     usernameField: "email"
 },
     async (email, password, done) => {
+        console.log(email, password, done);
         const user = await UserModel.findOne({ email })
         .catch(done);
 
@@ -43,7 +44,6 @@ passport.use(new JwtStrategy(
                 token = req.cookies['jwt'];
             }
 
-
             return token;
         },
         secretOrKey: process.env.JWT_SECRET
@@ -52,11 +52,9 @@ passport.use(new JwtStrategy(
         const user = await UserModel.findById(jwt_payload.sub)
             .catch(done);
 
-
         if (!user) {
             return done(null, false);
         }
-
 
         return done(null, user);
      }

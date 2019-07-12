@@ -46,8 +46,10 @@ async function loginCreate(req,res) {
 
     //regular login
     const { email, password } = req.body;
+    
+    console.log(req.body)
+    
     const user = await UserModel.findOne({ email });
-
     if (!user) {
         return res.render("authentication/login", { error: "Invalid email & password" });
     }
@@ -63,11 +65,11 @@ async function loginCreate(req,res) {
     //testing
         // const token = JWT.sign({ sub: req.user._id }, process.env.JWT_SECRET);
         // res.cookie("jwt", token);
-    res.json({ token }); 
+    return res.json({ token }); 
     //testing
         // req.user = user;
 
-    return res.redirect("/feed");
+    // return res.redirect("/feed");
 
 }
 
