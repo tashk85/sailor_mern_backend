@@ -40,6 +40,6 @@ app.use(require("./routes"));
 
 app.use(express.static("public"));
 
-// app.use(require("./middleware/error_handler_middleware"));
+app.use(require("./middleware/error_middleware"));
 
 module.exports = app;

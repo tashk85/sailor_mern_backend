@@ -4,12 +4,12 @@ const JWTService = require("./../services/jwt_service");
 //can remove this method when move to redux form
 function registerNew(req, res) {
     //display sign up form
-    return res.render("authentication/signup");
+    return res.render("authentications/signup");
 }
 
-async function registerCreate(req, res, next) {
+function registerCreate(req, res, next) {
     const { email, password, firstName,lastName } = req.body;
-    const user = new UserModel({ email, firstName,lastName  });
+    const user = new UserModel({ email, firstName,lastName });
     UserModel.register(user, password, (err, user) => {
         if (err) {
             return next(new HTTPError(500, err.message));
@@ -17,10 +17,10 @@ async function registerCreate(req, res, next) {
 
         const token = JWTService.generateToken(user);
 
-        res.json({ token });    
-
-        return res.redirect("user/interests");    
+        return res.json({ token });      
     });
+    
+    return res.redirect("user/interests");  
 }
 
 function logout(req,res) {
