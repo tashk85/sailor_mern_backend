@@ -7,10 +7,13 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override"); //let PUT & PATCH method override GET
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const app = express();
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.use(cors());
 
 app.use(expressSession({
     secret: process.env.SESSION_SECRET,
