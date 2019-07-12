@@ -1,14 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const ArticleController=require("./../controllers/article_controller");
+const CommentController=require("./../controllers/comment_controller");
+const LikesController=require("./../controllers/likes_controller");
 
-// To see an article
-router.get("/:id", (req, res) => res.send("Individual Article")); //ArticleController.show
+// To find the article 
+router.get("/:id", ArticleController.show); //ArticleController.show
 
 // Renders comments for an article
-router.get("/:id/comment", (req, res) => res.send("Individual Article Comment")); // CommentController.newComment
-router.post("/:id/comment", (req, res) => res.send("Created Individual Article Comment")); // CommentController.createComment
-// we don't need route to show all comments as it's part of article route
-// router.get("/:id/comments", (req, res) => res.send("Show Article Comments")); // CommentController.showComments
-router.delete("/:id/comment", (req, res) => res.send("Delete Individual Article Comment")); // CommentController.deleteComment
+router.post("/:articleid/comment", CommentController.createComment); // CommentController.createComment
+
+router.post("/:articleid/likes", LikesController.update); // LikesController.update
+
+
 
 module.exports = router;

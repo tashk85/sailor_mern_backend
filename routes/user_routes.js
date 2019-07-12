@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const UserController = require("./../controllers/user_controller");
 
-// Interests Creation
-router.get("/interests", (req, res) => res.send("Choose your interests")); //UserController.interestsNew
+// Interests Creation for redux
+router.get("/interests", UserController.interestsNew); //UserController.interestsNew
 
-router.post("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsCreate
+router.post("/:userid/interests", UserController.interestsCreate); //UserController.interestsCreate
 
 // Interests Update
 router.get("/interests", (req, res) => res.send("Edit your interests")); //UserController.interestsEdit
