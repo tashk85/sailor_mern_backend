@@ -12,18 +12,18 @@ const ArticleSchema = new Schema({
     },
     metadata: {
         title: String,
-        Author: String,
-        Source: String,
+        author: String,
+        source: String,
         url: String,
         categories: Array
     },
-    artilce_body: {
+    article_body: {
         type: String,
-        required: true
+        // required: true
     },
     comments: [CommentSchema],
-    likes:[likesSchema],
-    interest:[interestSchema]
+    likes: [likesSchema],
+    interest: [interestSchema]
 });
 
 module.exports = ArticleSchema;
