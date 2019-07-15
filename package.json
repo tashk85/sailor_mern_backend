@@ -16,6 +16,7 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "@sokratis/passport-linkedin-oauth2": "^2.1.0",
     "celebrate": "^10.0.1",
     "connect-mongo": "^3.0.0",
     "cookie-parser": "^1.4.4",

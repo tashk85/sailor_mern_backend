@@ -1,7 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const { Strategy: JwtStrategy, ExtractJwt} = require("passport-jwt");
-const { Strategy: LinkedInStrategy } = require("passport-linkedin-oauth2");
+const { Strategy: LinkedInStrategy } = require("@sokratis/passport-linkedin-oauth2");
 const UserModel = require("./../database/models/user_model");
 
 //The serializeUser() method stores information inside of our session relating to the passport user.
@@ -76,7 +76,8 @@ passport.use(new LinkedInStrategy(
         state: true,
         // passReqToCallback: true
     }, async (accessToken, refreshToken, profile, done) => {
-        console.log(accessToken);
+       console.log("*****************")
+       console.log(accessToken);
         const linkedinProfile = profile._json.publicProfileUrl;
         const nameFirst = profile._json.firstName;
         const nameLast = profile._json.lastName;

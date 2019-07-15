@@ -8,6 +8,7 @@ const { authorise } = require("./../middleware/authorisation_middleware");
 const passport = require("passport");
 
 router.get("/", (req, res) => res.send("Welcome"));
+router.get("/error", (req, res) => res.send("Welcome"));
 router.use("/auth", AuthRoutes);
 router.use("/user", UserRoutes);
 router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
