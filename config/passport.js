@@ -1,6 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const { Strategy: JwtStrategy, ExtractJwt} = require("passport-jwt");
+const { Strategy: LinkedInStrategy } = require("passport-linkedin-oauth2");
 const UserModel = require("./../database/models/user_model");
 
 //The serializeUser() method stores information inside of our session relating to the passport user.
@@ -58,4 +59,18 @@ passport.use(new JwtStrategy(
 
         return done(null, user);
      }
+));
+
+passport.use(new LinkedInStrategy(
+    {
+        clientID: process.env.LINKEDIN_KEY,
+        clientSecret: process.env.LINKEDIN_SECRET,
+        callbackURL: "http://localhost:3000/auth/linkedin",
+        scope: ['r_emailaddress', 'r_liteprofile'],
+    }, async (accessToken, refreshToken, profile, done) {
+        
+
+
+        return done(null, profile);
+    }
 ));
