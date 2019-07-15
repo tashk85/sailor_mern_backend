@@ -66,17 +66,17 @@ passport.use(new LinkedInStrategy(
         clientID: process.env.LINKEDIN_KEY,
         clientSecret: process.env.LINKEDIN_SECRET,
         callbackURL: "http://localhost:3000/auth/linkedin/callback",
-        profileFields: [
-            "first-name",
-            "last-name",
-            "email-address",
-            "public-profile-url"
-        ],
+        // profileFields: [
+        //     "first-name",
+        //     "last-name",
+        //     "email-address",
+        //     "public-profile-url"
+        // ],
         scope: ['r_emailaddress', 'r_basicprofile'],
         state: true,
-        passReqToCallback: true
+        // passReqToCallback: true
     }, async (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
+        console.log(accessToken);
         const linkedinProfile = profile._json.publicProfileUrl;
         const nameFirst = profile._json.firstName;
         const nameLast = profile._json.lastName;
@@ -91,7 +91,7 @@ passport.use(new LinkedInStrategy(
         }
 
         //if user doesn't exist then create one
-        user = await UserModel.create({ email, firstName: nameFirst, lastName: nameLast, linkedinProfile: linkedinId });
+        user = await UserModel.create({ email, firstName: nameFirst, lastName: nameLast, linkedinProfile });
 
         return done(null, user);
     }
