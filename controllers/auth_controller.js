@@ -39,7 +39,7 @@ function logout(req,res) {
 
 //can remove this method when move to redux form
 function loginNew(req,res){
-    return res.render("authentication/login");
+    return res.render("authentications/login");
 }
 
 async function loginCreate(req,res) {

@@ -40,4 +40,18 @@ router.post("/login", celebrate({
 
 router.get("/logout", AuthController.logout); //AuthController.logout
 
+
+router.get('/linkedin/logout', function(req, res) {
+    req.logout()
+    res.redirect('/')
+});
+
+router.get('/linkedin', passport.authenticate("linkedin", { state: 'SOME STATE' }));
+
+router.get('/linkedin/callback', 
+    passport.authenticate('linkedin', { failureRedirect: '/' }),
+    function (req, res) {
+        res.redirect('/');
+});
+
 module.exports = router;

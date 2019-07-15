@@ -25,7 +25,7 @@ passport.use(new LocalStrategy({
     usernameField: "email"
 },
     async (email, password, done) => {
-        console.log(email, password, done);
+        // console.log(email, password, done);
         const user = await UserModel.findOne({ email })
         .catch(done);
 
@@ -65,12 +65,34 @@ passport.use(new LinkedInStrategy(
     {
         clientID: process.env.LINKEDIN_KEY,
         clientSecret: process.env.LINKEDIN_SECRET,
-        callbackURL: "http://localhost:3000/auth/linkedin",
-        scope: ['r_emailaddress', 'r_liteprofile'],
-    }, async (accessToken, refreshToken, profile, done) {
-        
+        callbackURL: "http://localhost:3000/auth/linkedin/callback",
+        profileFields: [
+            "first-name",
+            "last-name",
+            "email-address",
+            "public-profile-url"
+        ],
+        scope: ['r_emailaddress', 'r_basicprofile'],
+        state: true,
+        passReqToCallback: true
+    }, async (accessToken, refreshToken, profile, done) => {
+        console.log(profile);
+        const linkedinProfile = profile._json.publicProfileUrl;
+        const nameFirst = profile._json.firstName;
+        const nameLast = profile._json.lastName;
+        const email = profile._json.emailAddress;
+        const linkedinToken = accessToken;
 
+        let user = await UserModel.findOne({ email })
+            .catch(done);
 
-        return done(null, profile);
+        if(user) {
+            return done(null, user);
+        }
+
+        //if user doesn't exist then create one
+        user = await UserModel.create({ email, firstName: nameFirst, lastName: nameLast, linkedinProfile: linkedinId });
+
+        return done(null, user);
     }
 ));
