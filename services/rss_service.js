@@ -10,27 +10,43 @@ async function RssMedCity() {
     let feed = await parser.parseURL("https://medcitynews.com/feed/");
 
     feed.items.forEach(async item => {        
-        let url = item.link;
-        try {
-            const article = await ArticleBody2(url);
-            // console.log(article);
-            await ArticleModel.create({
-                date_posted: item.pubDate,
-                metadata: {
-                    title: item.title,
-                    author: item.creator,
-                    source: "Med City",
-                    url: item.link,
-                    image: article.image,
-                    rssCategories: item.categories
-                },
-                article_body: article.content
-            })
-        } catch(error) {
-            console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
-            console.log(`Error: ${error}`);
-        }
-        console.log("one article saved")
+        const url = item.link;
+        const checkCategories = item.categories; //which is an array
+        // console.log(checkCategories);
+        const importCategories = [];
+        const health = regexHealth(checkCategories);
+        importCategories.push(health);
+        // const bio = await regexBio(checkCategories);
+        // importCategories.push(bio);
+        console.log(importCategories);
+        //regex function
+        // loop through each item in the array and check
+        // if .... containts "health",
+        // if any item return true,
+        // then push "Health" into importCategories
+         // if .... containts "bio",
+        // then push "BioPharmacy" into importCategories
+        // try {
+        //     const article = await ArticleBody2(url);
+        //     // console.log(article);
+        //     await ArticleModel.create({
+        //         date_posted: item.pubDate,
+        //         metadata: {
+        //             title: item.title,
+        //             author: item.creator,
+        //             source: "Med City",
+        //             url: item.link,
+        //             image: article.image,
+        //             rssCategories: item.categories,
+        //             localCategories: importCategories
+        //         },
+        //         article_body: article.content
+        //     })
+        // } catch(error) {
+        //     console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
+        //     console.log(`Error: ${error}`);
+        // }
+        // console.log("one article saved")
     })
      return console.log("all articles saved to database");
 };
@@ -68,6 +84,28 @@ function ArticleBody2(url){
         .catch((err) => {
         console.log(err);
         });
+}
+
+//regex function -> common function for check regex;
+function regexHealth(array,checkItem){
+    let health = "";
+    for (item of array) {
+        if (/checkItem/i.test(item)) {
+            health = `${checkItem}`;
+            break;
+        }
+    }
+    return health;
+}
+
+function regexBio(array){
+    let check = [];
+    array.forEach( item=> {
+       check.push(/bio/.test(item));
+    })
+    if (check.includes('true')) {
+        return 'bio';
+    }
 }
 
 //Function to retrieve rss feed from HealthCareIT and save to local database
