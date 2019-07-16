@@ -9,6 +9,13 @@ async function RssMedCity() {
 
     feed.items.forEach(async item => {        
         let url = item.link;
+        const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
+        // console.log(checkResult);
+        // console.log("IM HEEEEERE")
+        // if (checkResult) {
+        //     console.log("I'm already saved");
+        //     return;
+        // }
         const article = await ArticleBody2(url);
         console.log(article);
         await ArticleModel.create({
@@ -53,13 +60,23 @@ function ArticleBody2(url){
     let urlLink = url;
     return extractWithEmbedly(urlLink)
         .then((article) => {
-            let articleBody = article.content;
+            let articleBody = article;
             return articleBody
         })
         .catch((err) => {
         console.log(err);
         });
 }
+
+// function ArticleExists(url) {
+//     const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
+//     return console.log(checkResult);
+//     // if(){
+
+//     // }else(){
+
+//     // }
+// }
 
 
 
@@ -90,38 +107,10 @@ function ArticleBody2(url){
 //     });
 // }
 
-// function getIndividualArticle() {
-//     let url = "https://medcitynews.com/2019/07/kroger-partners-with-myriad-genetics-on-genetic-testing-pilot"; // medcity example ->extract
-
-//     // let url = "https://www.healthcareitnews.com/news/apple-watches-ai-help-docs-dictate-austin-regional-saving-2-hours-day"; //healthcare example -> extract
-
-//     // let url = "https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/"; // digitalhx example ->extractwithEmbedly
-
-
-
-//     //1st format
-//     // extract(url).then((article) => {
-//     //     console.log(article);
-//     // })
-//     // .catch((err) => {
-//     //     console.log(err);
-//     // })
-
-//     //2nd format 
-//     // extractWithEmbedly(url).then((article) => {
-//     //     console.log(article);
-//     //    }).catch((err) => {
-//     //     console.log(err);
-//     //    });
-// }
-
-
-
-
 module.exports = {
-    // RssMedCity,
+    RssMedCity
     // RssHealthCareIT
     // IndividualArticle,
-    getIndividualArticle
+    // getIndividualArticle
 
 }
