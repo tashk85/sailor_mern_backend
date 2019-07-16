@@ -49,9 +49,10 @@ router.get("/logout", AuthController.logout); //AuthController.logout
 router.get('/linkedin', passport.authenticate("linkedin", { state: 'SOME STATE' }));
 
 router.get('/linkedin/callback', 
-    passport.authenticate('linkedin'), (req, res) => {
+    passport.authenticate('linkedin', (req, res) => {
         console.log("here");
-        res.sendStatus(200);
-    });
+        // res.sendStatus(200);
+    }), AuthController.loginCreate
+);
 
 module.exports = router;
