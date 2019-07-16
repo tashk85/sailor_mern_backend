@@ -4,18 +4,20 @@ const parser = new Parser();
 const ArticleModel = require("./../database/models/article_model");
 const { extract, extractWithEmbedly } = require("article-parser");
 
+
+//Function to retrieve rss feed from MedCity and save to local database
 async function RssMedCity() {
     let feed = await parser.parseURL("https://medcitynews.com/feed/");
 
     feed.items.forEach(async item => {        
-        let url = item.link;
-        // const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
-        // console.log(checkResult);
-        // console.log("IM HEEEEERE")
-        // if (checkResult) {
-        //     console.log("I'm already saved");
-        //     return;
-        // }
+        const url = item.link;
+        const checkCategories = item.categories;
+        const importCategories = [];
+        const health = regexHealth(checkCategories);
+        health && importCategories.push(health);
+        // const bio = await regexBio(checkCategories);
+        // importCategories.push(bio);
+        // console.log(importCategories);
         try {
             const article = await ArticleBody2(url);
             // console.log(article);
@@ -27,7 +29,8 @@ async function RssMedCity() {
                     source: "Med City",
                     url: item.link,
                     image: article.image,
-                    categories: item.categories
+                    rssCategories: item.categories,
+                    localCategories: importCategories
                 },
                 article_body: article.content
             })
@@ -35,16 +38,15 @@ async function RssMedCity() {
             console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
             console.log(`Error: ${error}`);
         }
-
-
-        // console.log("one article saved")
+        console.log("one article saved")
     })
      return console.log("all articles saved to database");
 };
 
-// package that extract individual article from url & save inside <body> as html;
-// the image is available both inside the div and outside as object key-value pair;
-// Problem: have no \n at the end of the each tag, however need to remove html & body tag
+//Function 1 to retrieve article body from the article url
+    // package that extract individual article from url & save inside <body> as html;
+    // the image is available both inside the div and outside as object key-value pair;
+    // Problem: have no \n at the end of the each tag, however need to remove html & body tag
 function ArticleBody1(url){
     let urlLink = url;
     return extract(urlLink)
@@ -58,11 +60,12 @@ function ArticleBody1(url){
         })
 }
 
-// package that extract individual article from url & save as div
-// the image is available both inside the div and outside as object key-value pair;
-//feed to use this strategy: medcity, healthcareIT, digitalhealthX?
-// Problem: have \n at the end of each tag
-// We are mainingly use ArticleBody2 function now
+//Function 2 to retrieve article body from the article url
+    // package that extract individual article from url & save as div
+    // the image is available both inside the div and outside as object key-value pair;
+    //feed to use this strategy: medcity, healthcareIT, digitalhealthX?
+    // Problem: have \n at the end of each tag
+    // We are mainingly use ArticleBody2 function now
 function ArticleBody2(url){
     let urlLink = url;
     return extractWithEmbedly(urlLink)
@@ -75,49 +78,53 @@ function ArticleBody2(url){
         });
 }
 
-// function ArticleExists(url) {
-//     const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
-//     return console.log(checkResult);
-//     // if(){
+//regex function -> common function for check regex;
+function regexHealth(array){
+    let health = "";
+    for (item of array) {
+        if (/health/i.test(item)) {
+            health = "health";
+            break;
+        }
+    }
+    return health;
+}
 
-//     // }else(){
+function regexBio(array){
+    let check = [];
+    array.forEach( item=> {
+       check.push(/bio/.test(item));
+    })
+    if (check.includes('true')) {
+        return 'bio';
+    }
+}
 
-//     // }
+// function regexGeneral(array,checkItem){
+//     let checked = "";
+//     for (item of array) {
+//         let itemCheck = item.match(checkItem);
+//         if (itemCheck[0] !== ""){
+//             checked = checkItem;
+//             break;
+//         }
+//     }
+//     return checked;
 // }
 
-
-
-
+//Function to retrieve rss feed from HealthCareIT and save to local database
 // async function RssHealthCareIT() {
 //     let feed = await parser.parseURL("https://www.healthcareitnews.com/most_popular/feed");
 
 //     feed.items.forEach(item => {
-//         console.log(item.title);
-//         console.log(item.creator);
-//         console.log(item.link);
-//         console.log(item.pubDate);
-//         console.log(item.contentSnippet);
-//         console.log(item.categories);
+
 //     })
 //      return console.log(feed);
-
 // };
 
-// function IndividualArticle() {
-//     axios.get("https://medcitynews.com/2019/07/kroger-partners-with-myriad-genetics-on-genetic-testing-pilot")
-//     .then(response => {
-//         let feed = parser.parseString(response.data);
-//         return console.log(feed);
-//     })
-//     .catch(error=>{
-//         return console.log(error);
-//     });
-// }
 
 module.exports = {
     RssMedCity
     // RssHealthCareIT
-    // IndividualArticle,
-    // getIndividualArticle
 
 }
