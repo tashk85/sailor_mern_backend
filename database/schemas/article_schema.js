@@ -14,7 +14,12 @@ const ArticleSchema = new Schema({
         title: String,
         author: String,
         source: String,
-        url: String,
+        url: {
+            type: String,
+            // required: true,
+            unique: true
+        },
+        image: String,
         categories: Array
     },
     article_body: {
