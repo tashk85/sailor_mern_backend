@@ -4,19 +4,27 @@ const interestSchema = require("./interest_schema");
 const likesSchema = require("./likes_schema");
 const Schema = mongoose.Schema;
 
+
 const ArticleSchema = new Schema({
     date_posted: {
         type: Date,
         required: true
     },
     metadata: {
-        Author: String,
-        Source: String,
-        url: String
+        title: String,
+        author: String,
+        source: String,
+        url: String,
+        image: String,
+        categories: Array
+    },
+    article_body: {
+        type: String,
+        // required: true
     },
     comments: [CommentSchema],
-    likes:[likesSchema],
-    interest:[interestSchema]
+    likes: [likesSchema],
+    interest: [interestSchema]
 });
 
 module.exports = ArticleSchema;
