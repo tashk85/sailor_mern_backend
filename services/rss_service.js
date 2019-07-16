@@ -9,28 +9,35 @@ async function RssMedCity() {
 
     feed.items.forEach(async item => {        
         let url = item.link;
-        const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
+        // const checkResult = await ArticleModel.find({"metadata.url":`${url}`});
         // console.log(checkResult);
         // console.log("IM HEEEEERE")
         // if (checkResult) {
         //     console.log("I'm already saved");
         //     return;
         // }
-        const article = await ArticleBody2(url);
-        console.log(article);
-        await ArticleModel.create({
-            date_posted: item.pubDate,
-            metadata: {
-                title: item.title,
-                author: item.creator,
-                source: "Med City",
-                url: item.link,
-                image: article.image,
-                categories: item.categories
-            },
-            article_body: article.content
-        })
-        console.log("one article saved")
+        try {
+            const article = await ArticleBody2(url);
+            // console.log(article);
+            await ArticleModel.create({
+                date_posted: item.pubDate,
+                metadata: {
+                    title: item.title,
+                    author: item.creator,
+                    source: "Med City",
+                    url: item.link,
+                    image: article.image,
+                    categories: item.categories
+                },
+                article_body: article.content
+            })
+        } catch(error) {
+            console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
+            console.log(`Error: ${error}`);
+        }
+
+
+        // console.log("one article saved")
     })
      return console.log("all articles saved to database");
 };
