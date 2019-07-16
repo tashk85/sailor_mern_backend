@@ -20,7 +20,8 @@ const ArticleSchema = new Schema({
             unique: true
         },
         image: String,
-        categories: Array
+        rssCategories: Array,
+        localCategories: Array
     },
     article_body: {
         type: String,
