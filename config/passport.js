@@ -95,7 +95,7 @@ passport.use(new LinkedInStrategy(
         }
 
         //if user doesn't exist then create one
-        user = await UserModel.create({ email, firstName, lastName});
+        user = await UserModel.create({ email, firstName, lastName, password: "testing1"});
 
         return done(null, user);
     }
