@@ -15,6 +15,7 @@ const ArticleSchema = new Schema({
         author: String,
         source: String,
         url: String,
+        image: String,
         categories: Array
     },
     article_body: {
