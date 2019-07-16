@@ -9,7 +9,7 @@ async function RssMedCity() {
 
     feed.items.forEach(async item => {        
         let url = item.link;
-        const article = await ArticleBody1(url);
+        const article = await ArticleBody2(url);
         console.log(article);
         await ArticleModel.create({
             date_posted: item.pubDate,
@@ -28,6 +28,9 @@ async function RssMedCity() {
      return console.log("all articles saved to database");
 };
 
+// package that extract individual article from url & save inside <body> as html;
+// the image is available both inside the div and outside as object key-value pair;
+// Problem: have no \n at the end of the each tag, however need to remove html & body tag
 function ArticleBody1(url){
     let urlLink = url;
     return extract(urlLink)
@@ -41,6 +44,11 @@ function ArticleBody1(url){
         })
 }
 
+// package that extract individual article from url & save as div
+// the image is available both inside the div and outside as object key-value pair;
+//feed to use this strategy: medcity, healthcareIT, digitalhealthX?
+// Problem: have \n at the end of each tag
+// We are mainingly use ArticleBody2 function now
 function ArticleBody2(url){
     let urlLink = url;
     return extractWithEmbedly(urlLink)
@@ -83,37 +91,37 @@ function ArticleBody2(url){
 // }
 
 // function getIndividualArticle() {
-//     let url = "https://medcitynews.com/2019/07/kroger-partners-with-myriad-genetics-on-genetic-testing-pilot";
+//     let url = "https://medcitynews.com/2019/07/kroger-partners-with-myriad-genetics-on-genetic-testing-pilot"; // medcity example ->extract
 
-//     let url = "https://www.healthcareitnews.com/news/apple-watches-ai-help-docs-dictate-austin-regional-saving-2-hours-day";
+//     // let url = "https://www.healthcareitnews.com/news/apple-watches-ai-help-docs-dictate-austin-regional-saving-2-hours-day"; //healthcare example -> extract
 
-//     let url = "https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/";
+//     // let url = "https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/"; // digitalhx example ->extractwithEmbedly
 
-//     let url = "https://www.digitalhx.com/news/psychological-claims-at-work-why-they-cost-so-much-and-why-you-need-to-prevent-them/";
+
 
 //     //1st format
-//     extract(url).then((article) => {
-//         console.log(article);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
+//     // extract(url).then((article) => {
+//     //     console.log(article);
+//     // })
+//     // .catch((err) => {
+//     //     console.log(err);
+//     // })
 
 //     //2nd format 
-//     extractWithEmbedly(url).then((article) => {
-//         console.log(article);
-//        }).catch((err) => {
-//         console.log(err);
-//        });
+//     // extractWithEmbedly(url).then((article) => {
+//     //     console.log(article);
+//     //    }).catch((err) => {
+//     //     console.log(err);
+//     //    });
 // }
 
 
 
 
 module.exports = {
-    RssMedCity,
+    // RssMedCity,
     // RssHealthCareIT
     // IndividualArticle,
-    // getIndividualArticle
+    getIndividualArticle
 
 }
