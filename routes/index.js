@@ -14,7 +14,8 @@ router.use("/user", UserRoutes);
 // router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
 //test out rss feature without authentication
 router.use("/feed", FeedRoutes);
-router.use("/article",authorise, ArticleRoutes);
+// router.use("/article",authorise, ArticleRoutes);
+router.use("/article", ArticleRoutes);
 
 
 module.exports = router;
