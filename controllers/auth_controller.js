@@ -15,19 +15,8 @@ async function registerCreate(req, res, next) {
             return next(error);
         }
         const token = JWTService.generateToken(user);
-        return res.json({ token }); 
-        // return res.redirect("user/interests");  
+        return res.json({ token });  
     })   
-    // const user = new UserModel({ email, firstName,lastName });
-    // UserModel.register(user, password, (err, user) => {
-    //     if (err) {
-    //         return next(new HTTPError(500, err.message));
-    //     }
-
-    //     const token = JWTService.generateToken(user);
-
-    //     return res.json({ token });      
-    // });
 
 }
 
