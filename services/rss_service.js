@@ -1,36 +1,36 @@
 const Parser= require("rss-parser");
-const axios = require("axios");
 const parser = new Parser();
 const ArticleModel = require("./../database/models/article_model");
 const { extract, extractWithEmbedly } = require("article-parser");
 
 
 //Function to retrieve rss feed from MedCity and save to local database
-async function RssMedCity() {
-    let feed = await parser.parseURL("https://medcitynews.com/feed/");
-
+async function fetchRSS(url) {
+    let feed = await parser.parseURL(url);
     feed.items.forEach(async item => {        
         const url = item.link;
-        const checkCategories = item.categories;
-        const importCategories = [];
-        const health = regexHealth(checkCategories);
-        health && importCategories.push(health);
+        // Categories:
+        // const checkCategories = item.categories;
+        // const importCategories = [];
+        // const health = regexHealth(checkCategories);
+        // health && importCategories.push(health);
         // const bio = await regexBio(checkCategories);
         // importCategories.push(bio);
         // console.log(importCategories);
+        // End categories.
+
         try {
             const article = await ArticleBody2(url);
-            // console.log(article);
             await ArticleModel.create({
                 date_posted: item.pubDate,
                 metadata: {
                     title: item.title,
                     author: item.creator,
-                    source: "Med City",
+                    source: feed.title,
                     url: item.link,
                     image: article.image,
-                    rssCategories: item.categories,
-                    localCategories: importCategories
+                    // rssCategories: item.categories,
+                    // localCategories: importCategories
                 },
                 article_body: article.content
             })
@@ -112,19 +112,7 @@ function regexBio(array){
 //     return checked;
 // }
 
-//Function to retrieve rss feed from HealthCareIT and save to local database
-// async function RssHealthCareIT() {
-//     let feed = await parser.parseURL("https://www.healthcareitnews.com/most_popular/feed");
-
-//     feed.items.forEach(item => {
-
-//     })
-//      return console.log(feed);
-// };
-
 
 module.exports = {
-    RssMedCity
-    // RssHealthCareIT
-
+    fetchRSS
 }
