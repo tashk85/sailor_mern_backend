@@ -1,0 +1,198 @@
+/*********************** MedCity post ***********************/ 
+// Item
+{ creator: 'Kevin Truong',
+  title:
+   'AI drug discovery company Recursion Pharmaceuticals raises $121M Series C',
+  link:
+   'https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/',
+  pubDate: 'Tue, 16 Jul 2019 22:56:37 +0000',
+  'dc:creator': 'Kevin Truong',
+  comments:
+   'https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/#respond',
+  content:
+   '<p><a href="https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/"><img width="600" height="337" src="https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-600x337.jpg" class="attachment-large size-large wp-post-image" alt="" style="max-width: 100%; height: auto!important;" srcset="https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-600x337.jpg 600w, https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-300x169.jpg 300w, https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-768x432.jpg 768w, https://medcitynews.com/uploads/2019/07/GettyImages-1001354832.jpg 788w" sizes="(max-width: 600px) 100vw, 600px" /></a></p><p class="summary">Recursion&#8217;s technology works by generating millions of cellular images and using AI-based software as a way to analyze the data set and screen potential therapeutic compounds against a variety of diseased cells.</p>\n',
+  contentSnippet:
+   'Recursion’s technology works by generating millions of cellular images and using AI-based software as a way to analyze the data set and screen potential therapeutic compounds against a variety of diseased cells.',
+  guid: 'https://medcitynews.com/?p=464528',
+  categories:
+   [ 'Artificial Intelligence',
+     'BioPharma',
+     'Daily',
+     'News',
+     'Startups',
+     'SYN',
+     'Top Story',
+     'AI drug discovery',
+     'cerebral cavernous malformation',
+     'insitro',
+     'neurofibromatosis type 2',
+     'Recursion Pharmaceuticals',
+     'Salt Lake City',
+     'Sanofi',
+     'Schrodinger',
+     'Scottish Mortgage Investment Trust',
+     'Takeda Pharmaceutical',
+     'Utah' ],
+  isoDate: '2019-07-16T22:56:37.000Z' }
+
+  // Article
+  { _url:
+   'https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/',
+  url:
+   'http://api.embed.ly/1/extract?key=50a2e9136d504850a9d080b759fd3019&url=https%3A%2F%2Fmedcitynews.com%2F2019%2F07%2Fai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c%2F&format=json',
+  title:
+   'AI drug discovery company Recursion Pharmaceuticals raises $121M Series C',
+  description:
+   'Salt Lake City-based biotech Recursion Pharmaceuticals, which is part of the group of companies looking to use AI technology to accelerate drug development, has raised a $121 million Series C financing round led by Scottish Mortgage Investment Trust. New participants in the round include institutional investors like Intermountain Health, the University of Minnesota and the Texas Tech University System.',
+  author:
+   'Arundhati Parmar, Stephanie Baum, Alaric DeArment, Erin Dietsche, Kevin Truong',
+  source: 'MedCity News',
+  image:
+   'https://medcitynews.com/uploads/2019/07/GettyImages-1001354832.jpg',
+  content:
+   '<div>\n<img src="https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-600x337.jpg"> <p>Salt Lake City-based biotech <a href="https://www.recursionpharma.com/">Recursion Pharmaceuticals</a>, which is part of the group of companies looking to use AI technology to accelerate drug development, has raised a $121 million Series C financing round led by Scottish Mortgage Investment Trust.</p>\n<p>New participants in the round include institutional investors like Intermountain Health, the University of Minnesota and the Texas Tech University System.</p>\n<p>Recursion\'s technology works by generating millions of cellular images and using AI-based software as a way to analyze the data set and screen potential therapeutic compounds against a variety of diseased cells.</p>\n<p>The new capital will go towards building out the company\'s machine learning-based drug development system to add new features to predict pharmacology safety and the discovery of new chemical entities.</p>\n<p>Resources will also be directed at helping to build <a href="https://www.recursionpharma.com/pipeline/">out the company\'s clinical pipeline</a>, which includes clinical-stage programs for neurological diseases cerebral cavernous malformation and neurofibromatosis type 2. The company also has pre-clinical programs for conditions like Batten disease, Tay-sachs disease and hereditary hemorrhagic telangiectasia.</p>\n<p>"With these new resources, we will continue to drive toward a future in which drugs are developed-by people-with a new level of understanding about human biology that was simply not possible before machines," Recursion CEO Chris Gibson said in a statement.</p>\n<p>While Recursion is prioritizing its own drug development programs. the company also plans to continue to explore partnerships with big pharma companies in areas including immuno-oncology, oncology, aging and inflammation.</p>\n<p>Earlier this year, <a href="https://www.recursionpharma.com/press-article/recursion-announces-options-exercise-by-takeda-and-extension-of-ai-enabled-drug-discovery-collaboration/">Takeda Pharmaceutical exercised an option</a> for drug candidates in two rare diseases based on the Recursion\'s efforts and extended their drug discovery collaboration. Recursion also <a href="https://www.businesswire.com/news/home/20160425005113/en/Recursion-Pharmaceuticals-Announces-Research-Agreement-Sanofi-Genzyme">launched a research partnership with Sanofi</a> to help the company identify new uses for its clinical stage small molecules.</p>\n<p>Investors put more than $1 billion last year into companies exploring applications meant to use AI to accelerate drug discovery drawn in by the ability to apply technology to the expensive and laborious process of developing new therapies.</p>\n<p>New York AI biotech company  <a href="https://www.businesswire.com/news/home/20190519005015/en/Schr%C3%B6dinger-Announces-Close-Latest-Financing-Raising-Total">Schr&#246;dinger closed a $110 million earlier this year</a> and Daphne Koller\'s Insitro raised a $100 million Series A and announced a <a href="https://medcitynews.com/2019/04/gilead-insitro-in-250m-machine-learning-partnership-to-develop-nash-drugs/">$250 million machine learning partnership</a> with Gilead to develop NASH drugs.</p>\n<em>Picture: koto_feja, Getty Images</em> </div>' }
+
+
+
+/*********************** DigitalHealthX Latest post ***********************/ 
+
+// Item
+  { creator: 'Danielle Spinks',
+  title:
+   'Patients push for digital transformation in general practice',
+  link:
+   'https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/',
+  pubDate: 'Tue, 12 Mar 2019 00:49:15 +0000',
+  'content:encoded':
+   '<div><img width="1024" height="681" src="https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-1024x681.jpg" class="attachment-large size-large wp-post-image" alt="doctor using tablet device with patient" srcset="https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-1024x681.jpg 1024w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-300x200.jpg 300w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-768x511.jpg 768w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-610x406.jpg 610w" sizes="(max-width: 1024px) 100vw, 1024px" /></div><p>Around the world, patient demand is pushing doctors into the digital revolution. But not without some complications.</p>\n<h3>Differences in consumer and practitioner perceptions</h3>\n<p>A <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4642377/" target="_blank" rel="noopener">comparative survey</a> of how consumers and physicians viewed new technology, including smartphones, genetic testing, privacy, and patient-accessible electronic health records, found that consumers and health professionals differed significantly in their views of emerging medical technology. More enthusiasm and support was expressed by consumers.</p>\n<p>The study included almost 22,000 healthcare providers and almost half a million consumers. Amongst the findings, consumers “were more likely to prefer new technologies for a medical diagnosis compared with providers.”</p>\n<p>The omnibus study was published in 2015. Since then, globally, <a href="https://gkstrategy.com/wp-content/uploads/2018/11/The-Rise-of-Digital-Doctors.pdf" target="_blank" rel="noopener">demand from patients</a> has risen significantly. In the United Kingdom, pressure on the NHS has seen:</p>\n<ul>\n<li>A doubling of people seeking online GPs and prescription services (99%).</li>\n<li>A five-fold surge in searches for mental health apps</li>\n</ul>\n<p>It is believed that these changes are driven by a desire for convenience.</p>\n<h2>My Health Record</h2>\n<p>Right now in Australia, the push is not just coming from patients, but the federal government. General practices are being encouraged to register for <a href="https://www.myhealthrecord.gov.au/" target="_blank" rel="noopener">My Health Record</a>, a digital platform that provides centralised electronic health information for every Australian who doesn’t opt out.</p>\n<p>Both medical practitioners and individuals can access the records, which promises to offer better-connected care. Elements of the My Health Record system include eReferrals from GPs to specialists, shared health summaries, discharge summaries, prescription and dispense records, pathology reports, and diagnostic imaging reports.</p>\n<p>For general practitioners, My Health Record claims to provide the key benefits of avoiding adverse drug events, enhancing patient self-management, improving patient outcomes, reducing time to gather information, and avoiding service duplication.</p>\n<p>While the system offers convenience and improvements to patient care, it has not been without controversy and continues to have vocal detractors. The <a href="https://www.abc.net.au/news/2018-08-02/my-health-record-still-not-safe/10063026" target="_blank" rel="noopener">criticisms</a> have been in regards to the system&#8217;s privacy and security.</p>\n<p>Recent research found almost <a href="https://aushealthit.blogspot.com/2018/01/a-very-interesting-survey-of.html">two-thirds of Australians</a> <strong>want</strong> their healthcare records to be shared more effectively across healthcare providers, albeit only if there is certainty of data privacy and security.</p>\n<h2>2018 RACGP Technology Survey</h2>\n<p>In Australia, peak body the Royal Australian College of General Practitioners annual <a href="https://www.racgp.org.au/running-a-practice/technology/workplace-technologies/racgp-technology-survey" target="_blank" rel="noopener">2018 Technology Survey</a> paints a vivid picture. It seems the late majority has adopted digital health technologies with a big uptick in the use of digital technology for patient work.</p>\n<p><strong>Eighty-seven percent of GP respondents are now entirely digital</strong>, with no supplementary paper records maintained. The number of GPs recommending apps to patients rose from <strong>40% to 60%</strong>. Mental health, nutrition, fitness, family planning, and smoking cessation apps were the most commonly recommended. Notably, the number of GPs who rarely or never recommended apps to patients<strong> fell to 26% from 47% reported in 2017.</strong></p>\n<p>The main barriers identified were a lack of knowledge around effective apps, lack of a trustworthy source to access effective apps, lack of patient digital literacy and lack of integration into clinical software and workflows.</p>\n<p>Around 44% of GPs are using mobile devices (smartphone/tablets) for patient work. Specifically, devices are used for drug references, clinical test results, for accessing electronic medical records, sending SMS reminders, forms, practice information, and email.</p>\n<p>Surprisingly, of those who do <span style="text-decoration: underline;">not</span> use mobile devices for patient work, 38% do not see how mobile technology can benefit their day-to-day practice.</p>\n<p>The RACGP has developed  <a href="https://www.racgp.org.au/FSDEDEV/media/documents/Patient%20information/Recommending-Health-Apps-Factsheet.pdf" target="_blank" rel="noopener">Factsheet for GPs about health apps,</a> which contains useful information on what to consider when discussing health apps with patients.</p>\n<p>The reasons for any delays in getting doctors digital may simply come down to change.</p>\n<h2>Time to upskill</h2>\n<p>According to prominent American cardiologist and digital medicine researcher, <a href="https://en.wikipedia.org/wiki/Eric_Topol" target="_blank" rel="noopener">Dr Eric Topol</a>, <a href="https://www.bmj.com/content/361/bmj.k2861" target="_blank" rel="noopener">doctors need </a>training to upskill in order to take advantage of the new technologies.</p>\n<p>Dr Topol was commissioned by the National Health Service in the UK to review how the workforce needed to be prepared to work with new technologies.</p>\n<p>Ami Assigal, the Director of <a href="https://www.practicepartners.com.au/" target="_blank" rel="noopener">Practice Partners</a>, is at the forefront of the general practice transition to digital. “Most doctors work seeing patients from eight in the morning to six at night. They don’t get a chance to find out about it [digital technologies], it’s not because they don’t want to.”</p>\n<p>Practice Partners is an Australian-based consultancy for general practices that provides integrated IT systems, medical business coaching and consulting, and virtual practice management.</p>\n<blockquote><p>“Patients want to book an appointment anywhere, get referrals, get scripts, they don’t want to sit in a waiting room for half an hour,” she says. “Doctors only realise it’s an issue when their books are empty.” In the current climate, Ami Assigal observes how notions of goodwill are stagnant.</p></blockquote>\n<p>“Over the years, we’ve seen medical centres run by doctors who spend a lot of their time doing clinical work and have never been taught how to run a business.” Continuing with a business-as-usual approach may no longer be sustainable. “It’s going to get to the point where if you don’t do it, you’re going to be behind in the game. If patients have to go somewhere else to get what they want 82% of them won’t come back.”</p>\n<p>For the general practices who do make the journey into the digital ecosystem, there are real benefits. For practices, which are generally running off 30 to 35% margin, benefits include lower staffing costs, less time doing practice management, better patient care through patient portals, and the ability to provide things that patients want like eReferrals,  eScripts and online bookings. Assigal believes that “By the end of this year there’ll be a big shift to cloud-based medical IT.”</p>\n<h2>End of the Medical Gaze?</h2>\n<p>In <a href="https://en.wikipedia.org/wiki/The_Birth_of_the_Clinic" target="_blank" rel="noopener">the Birth of the Clinic</a>, Michel Foucault famously coined the term the ‘medical gaze’ to describe the power-imbalance between patient and practitioner, as well as the method of examining the body that filters out the patient’s opinion and identity.</p>\n<p>With health apps and self-management tools, the medical gaze may be spinning out of contemporary relevance. The digital transformation is putting patients in the control seat of their own healthcare.</p>\n<p>Alongside personalised medicine, as well as social and cultural changes, one thing seems clear. There will be more patient-centred innovation to come.</p>\n<span class="et_bloom_bottom_trigger"></span><p>The post <a rel="nofollow" href="https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/">Patients push for digital transformation in general practice</a> appeared first on <a rel="nofollow" href="https://www.digitalhx.com">DigitalHealthX</a>.</p>\n',
+  enclosure:
+   { url:
+      'https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor.jpg',
+     type: 'image/jpeg' },
+  'dc:creator': 'Danielle Spinks',
+  comments:
+   'https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/#respond',
+  content:
+   '<div><img width="1024" height="681" src="https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-1024x681.jpg" class="attachment-large size-large wp-post-image" alt="doctor using tablet device with patient" srcset="https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-1024x681.jpg 1024w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-300x200.jpg 300w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-768x511.jpg 768w, https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor-610x406.jpg 610w" sizes="(max-width: 1024px) 100vw, 1024px" /></div>\n<p>Around the world, patient demand is pushing doctors into the digital revolution. But not without some complications. Differences in consumer and practitioner perceptions A comparative survey of how consumers and physicians viewed new technology, including smartphones, genetic testing, privacy, and patient-accessible electronic health records, found that consumers and health professionals differed significantly in their views [&#8230;]</p>\n<p>The post <a rel="nofollow" href="https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/">Patients push for digital transformation in general practice</a> appeared first on <a rel="nofollow" href="https://www.digitalhx.com">DigitalHealthX</a>.</p>\n',
+  contentSnippet:
+   'Around the world, patient demand is pushing doctors into the digital revolution. But not without some complications. Differences in consumer and practitioner perceptions A comparative survey of how consumers and physicians viewed new technology, including smartphones, genetic testing, privacy, and patient-accessible electronic health records, found that consumers and health professionals differed significantly in their views […]\nThe post Patients push for digital transformation in general practice appeared first on DigitalHealthX.',
+  guid: 'https://www.digitalhx.com/?p=3213',
+  categories: [ 'Digital Health', 'General Practice' ],
+  isoDate: '2019-03-12T00:49:15.000Z' }
+
+// Article
+  { _url:
+   'https://www.digitalhx.com/news/patients-push-for-digital-transformation-in-general-practice/',
+  url:
+   'http://api.embed.ly/1/extract?key=50a2e9136d504850a9d080b759fd3019&url=https%3A%2F%2Fwww.digitalhx.com%2Fnews%2Fpatients-push-for-digital-transformation-in-general-practice%2F&format=json',
+  title:
+   'Patients push for digital transformation in general practice - DigitalHealthX',
+  description:
+   'Around the world, patient demand is pushing doctors into the digital revolution. But not without some complications. A comparative survey of how consumers and physicians viewed new technology, including smartphones, genetic testing, privacy, and patient-accessible electronic health records, found that consumers and health professionals differed significantly in their views of emerging medical technology.',
+  author: '',
+  source: 'DigitalHealthX',
+  image:
+   'https://www.digitalhx.com/wp-content/uploads/2019/03/digital_technology_doctor.jpg',
+  content:
+   '<div>\n<p>Around the world, patient demand is pushing doctors into the digital revolution. But not without some complications.</p>\n<h3>Differences in consumer and practitioner perceptions</h3>\n<p>A <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4642377/">comparative survey</a> of how consumers and physicians viewed new technology, including smartphones, genetic testing, privacy, and patient-accessible electronic health records, found that consumers and health professionals differed significantly in their views of emerging medical technology. More enthusiasm and support was expressed by consumers.</p>\n<p>The study included almost 22,000 healthcare providers and almost half a million consumers. Amongst the findings, consumers "were more likely to prefer new technologies for a medical diagnosis compared with providers."</p>\n<p>The omnibus study was published in 2015. Since then, globally, <a href="https://gkstrategy.com/wp-content/uploads/2018/11/The-Rise-of-Digital-Doctors.pdf">demand from patients</a> has risen significantly. In the United Kingdom, pressure on the NHS has seen:</p>\n<p>\n</p><ul>\n\t<li>A doubling of people seeking online GPs and prescription services (99%).</li>\n\t<li>A five-fold surge in searches for mental health apps</li>\n</ul>\n\n<p>It is believed that these changes are driven by a desire for convenience.</p>\n<h2>My Health Record</h2>\n<p>Right now in Australia, the push is not just coming from patients, but the federal government. General practices are being encouraged to register for <a href="https://www.myhealthrecord.gov.au/">My Health Record</a>, a digital platform that provides centralised electronic health information for every Australian who doesn\'t opt out.</p>\n<p>Both medical practitioners and individuals can access the records, which promises to offer better-connected care. Elements of the My Health Record system include eReferrals from GPs to specialists, shared health summaries, discharge summaries, prescription and dispense records, pathology reports, and diagnostic imaging reports.</p>\n<p>For general practitioners, My Health Record claims to provide the key benefits of avoiding adverse drug events, enhancing patient self-management, improving patient outcomes, reducing time to gather information, and avoiding service duplication.</p>\n<p>While the system offers convenience and improvements to patient care, it has not been without controversy and continues to have vocal detractors. The <a href="https://www.abc.net.au/news/2018-08-02/my-health-record-still-not-safe/10063026">criticisms</a> have been in regards to the system\'s privacy and security.</p>\n<p>Recent research found almost <a href="https://aushealthit.blogspot.com/2018/01/a-very-interesting-survey-of.html">two-thirds of Australians</a> <strong>want</strong> their healthcare records to be shared more effectively across healthcare providers, albeit only if there is certainty of data privacy and security.</p>\n<h2>2018 RACGP Technology Survey</h2>\n<p>In Australia, peak body the Royal Australian College of General Practitioners annual <a href="https://www.racgp.org.au/running-a-practice/technology/workplace-technologies/racgp-technology-survey">2018 Technology Survey</a> paints a vivid picture. It seems the late majority has adopted digital health technologies with a big uptick in the use of digital technology for patient work.</p>\n<p><strong>Eighty-seven percent of GP respondents are now entirely digital</strong>, with no supplementary paper records maintained. The number of GPs recommending apps to patients rose from <strong>40% to 60%</strong>. Mental health, nutrition, fitness, family planning, and smoking cessation apps were the most commonly recommended. Notably, the number of GPs who rarely or never recommended apps to patients<strong> fell to 26% from 47% reported in 2017.</strong></p>\n<p>The main barriers identified were a lack of knowledge around effective apps, lack of a trustworthy source to access effective apps, lack of patient digital literacy and lack of integration into clinical software and workflows.</p>\n<p>Around 44% of GPs are using mobile devices (smartphone/tablets) for patient work. Specifically, devices are used for drug references, clinical test results, for accessing electronic medical records, sending SMS reminders, forms, practice information, and email.</p>\n<p>Surprisingly, of those who do not use mobile devices for patient work, 38% do not see how mobile technology can benefit their day-to-day practice.</p>\n<p>The RACGP has developed  <a href="https://www.racgp.org.au/FSDEDEV/media/documents/Patient%20information/Recommending-Health-Apps-Factsheet.pdf">Factsheet for GPs about health apps,</a> which contains useful information on what to consider when discussing health apps with patients.</p>\n<p>The reasons for any delays in getting doctors digital may simply come down to change.</p>\n<h2>Time to upskill</h2>\n<p>According to prominent American cardiologist and digital medicine researcher, <a href="https://en.wikipedia.org/wiki/Eric_Topol">Dr Eric Topol</a>, <a href="https://www.bmj.com/content/361/bmj.k2861">doctors need </a>training to upskill in order to take advantage of the new technologies.</p>\n<p>Dr Topol was commissioned by the National Health Service in the UK to review how the workforce needed to be prepared to work with new technologies.</p>\n<p>Ami Assigal, the Director of <a href="https://www.practicepartners.com.au/">Practice Partners</a>, is at the forefront of the general practice transition to digital. "Most doctors work seeing patients from eight in the morning to six at night. They don\'t get a chance to find out about it [digital technologies], it\'s not because they don\'t want to."</p>\n<p>Practice Partners is an Australian-based consultancy for general practices that provides integrated IT systems, medical business coaching and consulting, and virtual practice management.</p>\n<blockquote>\n<p>"Patients want to book an appointment anywhere, get referrals, get scripts, they don\'t want to sit in a waiting room for half an hour," she says. "Doctors only realise it\'s an issue when their books are empty." In the current climate, Ami Assigal observes how notions of goodwill are stagnant.</p>\n</blockquote>\n<p>"Over the years, we\'ve seen medical centres run by doctors who spend a lot of their time doing clinical work and have never been taught how to run a business." Continuing with a business-as-usual approach may no longer be sustainable. "It\'s going to get to the point where if you don\'t do it, you\'re going to be behind in the game. If patients have to go somewhere else to get what they want 82% of them won\'t come back."</p>\n<p>For the general practices who do make the journey into the digital ecosystem, there are real benefits. For practices, which are generally running off 30 to 35% margin, benefits include lower staffing costs, less time doing practice management, better patient care through patient portals, and the ability to provide things that patients want like eReferrals,  eScripts and online bookings. Assigal believes that "By the end of this year there\'ll be a big shift to cloud-based medical IT."</p>\n<h2>End of the Medical Gaze?</h2>\n<p>In <a href="https://en.wikipedia.org/wiki/The_Birth_of_the_Clinic">the Birth of the Clinic</a>, Michel Foucault famously coined the term the \'medical gaze\' to describe the power-imbalance between patient and practitioner, as well as the method of examining the body that filters out the patient\'s opinion and identity.</p>\n<p>With health apps and self-management tools, the medical gaze may be spinning out of contemporary relevance. The digital transformation is putting patients in the control seat of their own healthcare.</p>\n<p>Alongside personalised medicine, as well as social and cultural changes, one thing seems clear. There will be more patient-centred innovation to come.</p>\n</div>' }
+
+
+/*********************** DigitalHealthX Oldest post ***********************/ 
+
+// Item
+  { creator: 'Gaurav Sood',
+  title: 'The Next Disruptions in Health Tech | Ask a VC',
+  link:
+   'https://www.digitalhx.com/news/the-next-disruptions-in-health-tech-ask-a-vc/',
+  pubDate: 'Sun, 20 May 2018 16:07:44 +0000',
+  'content:encoded':
+   '<div><img width="860" height="394" src="https://www.digitalhx.com/wp-content/uploads/2018/05/video-image.jpg" class="attachment-large size-large wp-post-image" alt="graphic image of technology" srcset="https://www.digitalhx.com/wp-content/uploads/2018/05/video-image.jpg 860w, https://www.digitalhx.com/wp-content/uploads/2018/05/video-image-300x137.jpg 300w, https://www.digitalhx.com/wp-content/uploads/2018/05/video-image-768x352.jpg 768w" sizes="(max-width: 860px) 100vw, 860px" /></div><p style="text-align: center;"><iframe src="//www.youtube.com/embed/u0VVQVn49VI" width="800" height="449" allowfullscreen="allowfullscreen"></iframe></p>\n<span class="et_bloom_bottom_trigger"></span><p>The post <a rel="nofollow" href="https://www.digitalhx.com/news/the-next-disruptions-in-health-tech-ask-a-vc/">The Next Disruptions in Health Tech | Ask a VC</a> appeared first on <a rel="nofollow" href="https://www.digitalhx.com">DigitalHealthX</a>.</p>\n',
+  enclosure:
+   { url:
+      'https://www.digitalhx.com/wp-content/uploads/2018/05/video-image.jpg',
+     type: 'image/jpeg' },
+  'dc:creator': 'Gaurav Sood',
+  comments:
+   'https://www.digitalhx.com/news/the-next-disruptions-in-health-tech-ask-a-vc/#respond',
+  content:
+   '<div><img width="860" height="394" src="https://www.digitalhx.com/wp-content/uploads/2018/05/video-image.jpg" class="attachment-large size-large wp-post-image" alt="graphic image of technology" srcset="https://www.digitalhx.com/wp-content/uploads/2018/05/video-image.jpg 860w, https://www.digitalhx.com/wp-content/uploads/2018/05/video-image-300x137.jpg 300w, https://www.digitalhx.com/wp-content/uploads/2018/05/video-image-768x352.jpg 768w" sizes="(max-width: 860px) 100vw, 860px" /></div>\n<p>The post <a rel="nofollow" href="https://www.digitalhx.com/news/the-next-disruptions-in-health-tech-ask-a-vc/">The Next Disruptions in Health Tech | Ask a VC</a> appeared first on <a rel="nofollow" href="https://www.digitalhx.com">DigitalHealthX</a>.</p>\n',
+  contentSnippet:
+   'The post The Next Disruptions in Health Tech | Ask a VC appeared first on DigitalHealthX.',
+  guid: 'http://wp.rta.ninja/dhx/?p=1052',
+  categories: [ 'HealthTech' ],
+  isoDate: '2018-05-20T16:07:44.000Z' }
+
+  // Article
+  { _url:
+   'https://www.digitalhx.com/news/the-next-disruptions-in-health-tech-ask-a-vc/',
+  url:
+   'http://api.embed.ly/1/extract?key=50a2e9136d504850a9d080b759fd3019&url=https%3A%2F%2Fwww.digitalhx.com%2Fnews%2Fthe-next-disruptions-in-health-tech-ask-a-vc%2F&format=json',
+  title:
+   'The Next Disruptions in Health Tech | Ask a VC - DigitalHealthX',
+  description: 'Video: The Next Disruptions in Health Tech | Ask a VC',
+  author: '',
+  source: 'DigitalHealthX',
+  image:
+   'https://www.digitalhx.com/wp-content/uploads/2019/02/dhx-logo-tagline-1.png',
+  content: null }
+
+
+/*********************** Healthcare IT Oldest post ***********************/ 
+// Item
+  { creator:
+   'mike.miliard@medtechmedia.com; Twitter: @MikeMiliardHITN (Mike Miliard)',
+  title: 'Surescripts files motion to dismiss FTC antitrust charge',
+  link:
+   'https://www.healthcareitnews.com/news/surescripts-files-motion-dismiss-ftc-antitrust-charge',
+  pubDate: 'Mon, 15 Jul 2019 12:56:26 -0400',
+  author:
+   'mike.miliard@medtechmedia.com; Twitter: @MikeMiliardHITN (Mike Miliard)',
+  enclosure:
+   { url:
+      'https://www.healthcareitnews.com/sites/hitn/files/pharmacy%20medicine_HITN_0.jpg',
+     length: '210425',
+     type: 'image/jpeg' },
+  comments:
+   'https://www.healthcareitnews.com/news/surescripts-files-motion-dismiss-ftc-antitrust-charge',
+  content:
+   'The e-prescribing giant says the Federal Trade Commission\'s complaint shouldn\'t be reviewed in federal court because it relies on several factual errors.\n',
+  contentSnippet:
+   'The e-prescribing giant says the Federal Trade Commission\'s complaint shouldn\'t be reviewed in federal court because it relies on several factual errors.',
+  guid:
+   'https://www.healthcareitnews.com/news/surescripts-files-motion-dismiss-ftc-antitrust-charge',
+  categories:
+   [ { _: 'Compliance &amp; Legal', '$': [Object] },
+     { _: 'Electronic Health Records (EHR, EMR)', '$': [Object] },
+     { _: 'Government &amp; Policy', '$': [Object] },
+     { _: 'Interoperability', '$': [Object] },
+     { _: 'Pharmacy', '$': [Object] } ],
+  isoDate: '2019-07-15T16:56:26.000Z' }
+
+  //Article
+  { _url:
+   'https://www.healthcareitnews.com/news/surescripts-files-motion-dismiss-ftc-antitrust-charge',
+  url:
+   'http://api.embed.ly/1/extract?key=50a2e9136d504850a9d080b759fd3019&url=https%3A%2F%2Fwww.healthcareitnews.com%2Fnews%2Fsurescripts-files-motion-dismiss-ftc-antitrust-charge&format=json',
+  title: 'Surescripts files motion to dismiss FTC antitrust charge',
+  description:
+   'Surescripts has moved to dismiss the Federal Trade Commission\'s charge from earlier this year that it holds an illegal monopoly on the e-prescribing market. WHY IT MATTERS This past April, the FTC alleged that Surescripts "intentionally set out to keep e-prescription routing and eligibility customers on both sides of each market from using additional platforms (a practice known as multihoming) using anticompetitive exclusivity agreements, threats, and other exclusionary tactics."',
+  author: '',
+  source: 'Healthcare IT News',
+  image:
+   'https://www.healthcareitnews.com/sites/hitn/files/pharmacy%20medicine_HITN_0.jpg',
+  content:
+   '<div>\n<p>Surescripts has moved to dismiss the Federal Trade Commission\'s charge from earlier this year that it holds an illegal monopoly on the e-prescribing market.</p>\n<p><strong>WHY IT MATTERS</strong><br> This past April, the <a href="https://www.healthcareitnews.com/news/updated-ftc-charges-surescripts-monopolizing-e-prescription-market">FTC alleged that Surescripts</a> "intentionally set out to keep e-prescription routing and eligibility customers on both sides of each market from using additional platforms (a practice known as multihoming) using anticompetitive exclusivity agreements, threats, and other exclusionary tactics."</p>\n<p>FTC said its suit aims to counter that outsized influence and competition in the marketplace and to provide "monetary redress to consumers."</p>\n<p>But in filing its motion to dismiss this past Friday, Surescripts countered that the agency\'s charge should be tossed out, since it rests upon a several factual misreadings.</p>\n<p>For example, FTC points to Surescripts\' contracts with Epic as an example of a loyalty provision, but the company asserts that its contract with the EHR vendors doesn\'t an exclusivity requirement. Moreover, it says the FTC is incorrect when it claims that nearly all of Surescripts\' contracts with Epic customers also contain such requirements.</p>\n<p>FTC also says the e-prescribing vendor\'s contracts have a penalty provision it claims would discourage EHR companies from using multiple networks or switching away from Surescripts, requiring that those vendors repay loyalty incentives that they\'d previously earned. But Surescripts claims there is no such requirement for EHR vendors to return incentive payments earned following a notice of termination, and says and such companies are free terminate agreements with just six months\' notice.</p>\n<p>More generally, Surescripts counters that FTC misrepresents the dollars and cents realities of the e-prescribing market, making what it says is a theoretical claim that drug prices could have fallen by more than the 70% Surescripts managed to achieve. And it says the regulatory agency can\'t support its claim that Surescripts\' alleged market monopoly led to lower quality and reduced innovation.</p>\n<p>In its motion to dismiss, Surescripts lists several other antitrust case precedents that show, it says, that FTC is seeking to stretch the boundaries of its regulatory mandate.</p>\n<p><strong>THE LARGER TREND</strong><br> For its part, FTC has said its case against Surescripts was just part of its larger ongoing efforts to end anti-competitive practices that put consumers at a disadvantage and raise the cost of care.</p>\n<p>"Surescripts\' illegal contracts denied customers and, ultimately, patients, the benefits of competition - including lower prices, increased output, thriving innovation, higher quality, and more customer choice," <a href="https://www.healthcareitnews.com/news/updated-ftc-charges-surescripts-monopolizing-e-prescription-market">said FTC Bureau of Competition Director Bruce Hoffman in April</a>. "Through this litigation, we hope to eliminate the anticompetitive conduct, open the relevant markets to competition, and redress the harm that Surescripts\'s conduct has caused."</p>\n<p><strong>ON THE RECORD</strong><br> "We continue to be disappointed at the allegations made by the Federal Trade Commission," Surescripts CEO Tom Skelton said in a statement. "We wholeheartedly share the FTC\'s focus on lowering healthcare costs, and we have achieved significant reductions with e-prescribing for many years. However, the FTC\'s complaint makes significant factual errors about Surescripts\' business and mischaracterizes the economic realities of the e-prescribing market.</p>\n<p>"It is important to highlight that while the cost of American healthcare overall continues to rise, Surescripts has reduced the cost of e-prescribing by 70% since 2009, a goal we will continue to focus on as a critical part of our business," he added. "There is no question that e-prescribing has brought enormous value to patients and clinicians alike through innovations in accuracy, safety and convenience."</p>\n<em>Twitter: <a href="https://twitter.com/MikeMiliardHITN">@MikeMiliardHITN</a><br> Email the writer:<a href="mailto:mike.miliard@himssmedia.com">mike.miliard@himssmedia.com</a></em> <em>Healthcare IT News is a publication of HIMSS Media.</em> </div>' }
+
+
+
+
+   {
+      _url:
+      url:
+      title:
+      description:
+      author:
+      source:
+      image:
+      content:
+   }

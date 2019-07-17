@@ -8,19 +8,17 @@ const { extract, extractWithEmbedly } = require("article-parser");
 async function fetchRSS(url) {
     let feed = await parser.parseURL(url);
     feed.items.forEach(async item => {        
-        const url = item.link;
-        // Categories:
-        // const checkCategories = item.categories;
-        // const importCategories = [];
-        // const health = regexHealth(checkCategories);
-        // health && importCategories.push(health);
-        // const bio = await regexBio(checkCategories);
-        // importCategories.push(bio);
-        // console.log(importCategories);
-        // End categories.
+        const itemURL = item.link;
+
+        const dhx = "https://www.digitalhx.com/feed/";
+        let isDHX = false;
+        if (url === dhx) {
+            isDHX = true;
+            console.log("I am here because DHX is true")
+        }
 
         try {
-            const article = await ArticleBody2(url);
+            const article = await ArticleBody2(itemURL);
             await ArticleModel.create({
                 date_posted: item.pubDate,
                 metadata: {
@@ -28,16 +26,17 @@ async function fetchRSS(url) {
                     author: item.creator,
                     source: feed.title,
                     url: item.link,
-                    image: article.image,
+                    image: isDHX ? item.enclosure.url : article.image,
                     // rssCategories: item.categories,
                     // localCategories: importCategories
                 },
-                article_body: article.content
+                article_body: isDHX ? item['content:encoded'] : article.content
             })
         } catch(error) {
             console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
             console.log(`Error: ${error}`);
         }
+        isDHX = false;
         console.log("one article saved")
     })
      return console.log("all articles saved to database");
