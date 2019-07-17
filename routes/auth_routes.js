@@ -38,21 +38,16 @@ router.post("/login", celebrate({
     }), AuthController.loginCreate
 ); 
 
-router.get("/logout", AuthController.logout); //AuthController.logout
+// router.get("/logout", AuthController.logout); //AuthController.logout
 
-
-// router.get('/linkedin/logout', function(req, res) {
-//     req.logout()
-//     res.redirect('/')
-// });
 
 router.get('/linkedin', passport.authenticate("linkedin", { state: 'SOME STATE' }));
 
 router.get('/linkedin/callback', 
-    passport.authenticate('linkedin', (req, res) => {
-        console.log("here");
-        // res.sendStatus(200);
-    }), AuthController.loginCreate
+    passport.authenticate('linkedin', {
+        failureRedirect: "/login",
+        session: false
+    }), AuthController.loginOAuthCreate
 );
 
 module.exports = router;
