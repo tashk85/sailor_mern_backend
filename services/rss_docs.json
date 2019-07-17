@@ -196,3 +196,28 @@
       image:
       content:
    }
+
+
+   // Extract article method:
+
+   { title:
+      'AI drug discovery company Recursion Pharmaceuticals raises $121M Series C',
+     alias:
+      'ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c-1563342391656-2wVd5axzHg',
+     url:
+      'https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/',
+     canonicals:
+      [ 'https://medcitynews.com/2019/07/ai-drug-discovery-company-recursion-pharmaceuticals-raises-121m-series-c/' ],
+     description:
+      'Recursion\'s technology works by generating millions of cellular images and using AI-based software as a way to analyze the data set and screen potential...',
+     content:
+      '<html><body><div><p><img src="https://medcitynews.com/uploads/2019/07/GettyImages-1001354832-600x337.jpg" alt /></p><p>Salt Lake City-based biotech <a href="https://www.recursionpharma.com/">Recursion Pharmaceuticals</a>, which is part of the group of companies looking to use AI technology to accelerate drug development, has raised a $121 million Series C financing round led by Scottish Mortgage Investment Trust.</p><p>New participants in the round include institutional investors like Intermountain Health, the University of Minnesota and the Texas Tech University System.</p><p>Recursion’s technology works by generating millions of cellular images and using AI-based software as a way to analyze the data set and screen potential therapeutic compounds against a variety of diseased cells.</p><p>The new capital will go towards building out the company’s machine learning-based drug development system to add new features to predict pharmacology safety and the discovery of new chemical entities.</p><p>Resources will also be directed at helping to build <a href="https://www.recursionpharma.com/pipeline/">out the company’s clinical pipeline</a>, which includes clinical-stage programs for neurological diseases cerebral cavernous malformation and neurofibromatosis type 2. The company also has pre-clinical programs for conditions like Batten disease, Tay-sachs disease and hereditary hemorrhagic telangiectasia.</p><p>“With these new resources, we will continue to drive toward a future in which drugs are developed—by people—with a new level of understanding about human biology that was simply not possible before machines,” Recursion CEO Chris Gibson said in a statement.</p><p>While Recursion is prioritizing its own drug development programs. the company also plans to continue to explore partnerships with big pharma companies in areas including immuno-oncology, oncology, aging and inflammation.</p><p>Earlier this year, <a href="https://www.recursionpharma.com/press-article/recursion-announces-options-exercise-by-takeda-and-extension-of-ai-enabled-drug-discovery-collaboration/">Takeda Pharmaceutical exercised an option</a> for drug candidates in two rare diseases based on the Recursion’s efforts and extended their drug discovery collaboration. Recursion also <a href="https://www.businesswire.com/news/home/20160425005113/en/Recursion-Pharmaceuticals-Announces-Research-Agreement-Sanofi-Genzyme">launched a research partnership with Sanofi</a> to help the company identify new uses for its clinical stage small molecules.</p><p>Investors put more than $1 billion last year into companies exploring applications meant to use AI to accelerate drug discovery drawn in by the ability to apply technology to the expensive and laborious process of developing new therapies.</p><p>New York AI biotech company <a href="https://www.businesswire.com/news/home/20190519005015/en/Schr%C3%B6dinger-Announces-Close-Latest-Financing-Raising-Total">Schrödinger closed a $110 million earlier this year</a> and Daphne Koller’s Insitro raised a $100 million Series A and announced a <a href="https://medcitynews.com/2019/04/gilead-insitro-in-250m-machine-learning-partnership-to-develop-nash-drugs/">$250 million machine learning partnership</a> with Gilead to develop NASH drugs.</p><p><em>Picture: koto_feja, Getty Images</em></p></div></body></html>',
+     image:
+      'https://medcitynews.com/uploads/2019/07/GettyImages-1001354832.jpg',
+     author: '',
+     source: 'MedCity News',
+     domain: 'medcitynews.com',
+     publishedTime: '2019-07-16T22:56:37+00:00',
+     duration: 73 }
+   
+   

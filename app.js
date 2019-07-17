@@ -46,4 +46,6 @@ app.use(express.static("public"));
 
 app.use(require("./middleware/error_middleware"));
 
+require("./services/rss_cron");
+
 module.exports = app;
