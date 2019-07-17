@@ -14,7 +14,7 @@ async function create(req, res) {
     try {
         const article = await fetchArticleBodyExtract(url);
         await ArticleModel.create({
-            date_posted: article.publishedTime || 1999,
+            date_posted: article.publishedTime || 0,
             metadata: {
                 title: article.title,
                 author: article.author,
