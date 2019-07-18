@@ -1,26 +1,23 @@
-const Parser= require("rss-parser");
+const Parser = require("rss-parser");
 const parser = new Parser();
 const ArticleModel = require("./../database/models/article_model");
 const { extract, extractWithEmbedly } = require("article-parser");
 
-
-//Function to retrieve rss feed from MedCity and save to local database
+// Method that fetches article information from RSS feeds and saves data to database
 async function fetchRSS(url) {
     let feed = await parser.parseURL(url);
     feed.items.forEach(async item => {        
-        const url = item.link;
-        // Categories:
-        // const checkCategories = item.categories;
-        // const importCategories = [];
-        // const health = regexHealth(checkCategories);
-        // health && importCategories.push(health);
-        // const bio = await regexBio(checkCategories);
-        // importCategories.push(bio);
-        // console.log(importCategories);
-        // End categories.
+        const articleURL = item.link;
+
+        // We need to extract information slightly differently for the DHX feed due to its formatting
+        const dhx = "https://www.digitalhx.com/feed/";
+        let isDHX = false;
+        if (url === dhx) {
+            isDHX = true;
+        }
 
         try {
-            const article = await ArticleBody2(url);
+            const article = await fetchArticleBodyEmbedly(articleURL);
             await ArticleModel.create({
                 date_posted: item.pubDate,
                 metadata: {
@@ -28,91 +25,44 @@ async function fetchRSS(url) {
                     author: item.creator,
                     source: feed.title,
                     url: item.link,
-                    image: article.image,
+                    image: isDHX ? item.enclosure.url : article.image,
                     // rssCategories: item.categories,
                     // localCategories: importCategories
                 },
-                article_body: article.content
+                article_body: isDHX ? item['content:encoded'] : article.content
             })
         } catch(error) {
-            console.log("***************************  Ignore the error if the error is duplicate keys: E11000  ********************************");
+            console.log("***************************  Ignore if E11000: article has already been saved to database  ********************************");
             console.log(`Error: ${error}`);
         }
-        console.log("one article saved")
+        isDHX = false;
     })
-     return console.log("all articles saved to database");
+    return console.log("All articles saved to database");
 };
 
-//Function 1 to retrieve article body from the article url
-    // package that extract individual article from url & save inside <body> as html;
-    // the image is available both inside the div and outside as object key-value pair;
-    // Problem: have no \n at the end of the each tag, however need to remove html & body tag
-function ArticleBody1(url){
-    let urlLink = url;
-    return extract(urlLink)
-        .then((article) => {
-            let {image, content} = article;
-            let articleBody = {image, content};
-            return articleBody
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-}
 
-//Function 2 to retrieve article body from the article url
-    // package that extract individual article from url & save as div
-    // the image is available both inside the div and outside as object key-value pair;
-    //feed to use this strategy: medcity, healthcareIT, digitalhealthX?
-    // Problem: have \n at the end of each tag
-    // We are mainingly use ArticleBody2 function now
-function ArticleBody2(url){
-    let urlLink = url;
-    return extractWithEmbedly(urlLink)
+function fetchArticleBodyEmbedly(url) {
+    return extractWithEmbedly(url)
         .then((article) => {
-            let articleBody = article;
-            return articleBody
+            return article;
         })
         .catch((err) => {
         console.log(err);
         });
 }
 
-//regex function -> common function for check regex;
-function regexHealth(array){
-    let health = "";
-    for (item of array) {
-        if (/health/i.test(item)) {
-            health = "health";
-            break;
-        }
-    }
-    return health;
+function fetchArticleBodyExtract(url) {
+    return extract(url)
+        .then((article) => {
+            return article;
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 }
-
-function regexBio(array){
-    let check = [];
-    array.forEach( item=> {
-       check.push(/bio/.test(item));
-    })
-    if (check.includes('true')) {
-        return 'bio';
-    }
-}
-
-// function regexGeneral(array,checkItem){
-//     let checked = "";
-//     for (item of array) {
-//         let itemCheck = item.match(checkItem);
-//         if (itemCheck[0] !== ""){
-//             checked = checkItem;
-//             break;
-//         }
-//     }
-//     return checked;
-// }
 
 
 module.exports = {
-    fetchRSS
+    fetchRSS,
+    fetchArticleBodyExtract
 }
