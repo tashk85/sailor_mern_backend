@@ -28,9 +28,11 @@ async function create(req, res) {
 
         })
         console.log(`article added: ${article.title}`)
+        return res.json({ article })
     } catch(error) {
         console.log("***************************  Ignore if E11000: article has already been saved to database  ********************************");
         console.log(`Error: ${error}`);
+        return res.json({ error: error.code })
     } 
 }
 
