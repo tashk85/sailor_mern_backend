@@ -15,8 +15,17 @@ async function interestsCreate(req, res) {
     res.redirect("/feed");
 }
 
+function show(req, res) {
+    try {
+        const { user } = req;
+        return res.json(user);
+    } catch (error) {
+        return next(error);
+    }
+} 
 
 module.exports = {
     interestsNew,
-    interestsCreate 
+    interestsCreate,
+    show
 }

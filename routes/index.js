@@ -11,7 +11,7 @@ const passport = require("passport");
 router.get("/", (req, res) => res.send("Welcome"));
 router.get("/error", (req, res) => res.send("Welcome"));
 router.use("/auth", AuthRoutes);
-router.use("/user", UserRoutes);
+router.use("/user", passport.authenticate("jwt", { session: false }), UserRoutes);
 // router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
 //test out rss feature without authentication
 router.use("/feed", FeedRoutes);
