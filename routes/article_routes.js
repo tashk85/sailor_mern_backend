@@ -12,6 +12,6 @@ router.post("/:articleid/comment", CommentController.createComment); // CommentC
 
 router.post("/:articleid/likes", LikesController.update); // LikesController.update
 
-router.post("/new", ArticleController.create);
+// router.post("/new", ArticleController.create); --> move to admin routes
 
 module.exports = router;

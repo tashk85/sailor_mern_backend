@@ -3,8 +3,9 @@ const router = express.Router();
 const AuthRoutes = require("./auth_routes");
 const UserRoutes = require("./user_routes");
 const FeedRoutes = require("./feed_routes");
+const AdminRoutes = require("./admin_routes");
 const ArticleRoutes = require("./article_routes");
-const { authorise } = require("./../middleware/authorisation_middleware");
+const { admin_authorise   } = require("./../middleware/authorisation_middleware");
 const passport = require("passport");
 
 router.get("/", (req, res) => res.send("Welcome"));
@@ -16,6 +17,7 @@ router.use("/user", UserRoutes);
 router.use("/feed", FeedRoutes);
 // router.use("/article",authorise, ArticleRoutes);
 router.use("/article", ArticleRoutes);
+router.use("/admin", admin_authorise, AdminRoutes);
 
 
 module.exports = router;

@@ -8,8 +8,8 @@ function registerNew(req, res) {
 }
 
 async function registerCreate(req, res, next) {
-    const { email, password, firstName,lastName } = req.body;
-    const user = await UserModel.create({ email, password, firstName, lastName });
+    const { email, password, firstName,lastName, admin=false} = req.body;
+    const user = await UserModel.create({ email, password, firstName, lastName, admin});
     req.login(user,(error) => {
         if (error) {
             return next(error);

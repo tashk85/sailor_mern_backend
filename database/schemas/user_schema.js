@@ -24,6 +24,15 @@ const UserSchema = new Schema({
         trim: true,
         bcrypt: true
     },
+    admin: {
+        type: Boolean,
+        default: false,
+        required: true
+    },
+    avatar: {
+        type: String,
+        trim: true
+    },
     linkedinProfile: {
         type: String,
         trim: true
