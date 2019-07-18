@@ -8,9 +8,11 @@ const LikesController=require("./../controllers/likes_controller");
 router.get("/:id", ArticleController.show); //ArticleController.show
 
 // Renders comments for an article
-router.post("/:articleid/comment", CommentController.createComment); // CommentController.createComment
+router.post("/:articleId/comment", CommentController.createComment); // CommentController.createComment
 
-router.post("/:articleid/likes", LikesController.update); // LikesController.update
+router.post("/:articleId/likes", LikesController.update); // LikesController.update
+router.put("/:articleId/likes", LikesController.update); // LikesController.update
+router.patch("/:articleId/likes", LikesController.update); // LikesController.update
 
 // router.post("/new", ArticleController.create); --> move to admin routes
 
