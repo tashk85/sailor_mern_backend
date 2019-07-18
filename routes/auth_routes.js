@@ -14,7 +14,8 @@ router.post("/signup", celebrate({
         firstName: Joi.string().required(),
         lastName: Joi.string().required(),
         email: Joi.string().email().required(),
-        password: Joi.string().required()
+        password: Joi.string().required(),
+        admin: Joi.boolean()
     }
 }), AuthController.registerCreate); 
 
