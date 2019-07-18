@@ -1,22 +1,24 @@
 const UserModel = require("./../database/models/user_model");
 
-function interestsNew (req, res) {
-    res.render("forms/interest_form");
-}
-
-async function interestsCreate(req, res) {
+// API to save interests for a user
+async function interestsCreate(req, res, next) {
     
     let { userId } = req.params;
     let { interests } = req.body;
 
     await UserModel.findByIdAndUpdate(userId, {interests});
 
-
-    res.redirect("/feed");
+    res.json({ interests });
 }
 
+// API to show user info
+function showProfile(req, res, next) {
+    // get first name, last name, avatar
+    // interests
+    // likes that a user has from article model
+}
 
 module.exports = {
-    interestsNew,
-    interestsCreate 
+    interestsCreate,
+    showProfile
 }

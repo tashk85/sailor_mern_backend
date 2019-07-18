@@ -37,7 +37,6 @@ app.use(passport.session());
 
 app.use(cookieParser());
 
-
 app.use(morgan("combined"));
 
 app.use(require("./routes"));

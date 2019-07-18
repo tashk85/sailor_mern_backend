@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const interestSchema = new Schema({
+const InterestSchema = new Schema({
     tag: {
         type: String,
-        enum: [ 'health','degisn', 'tech', 'react', 'javascript', 'all', 'none'],
+        enum: [ 'health','design', 'tech', 'react', 'javascript', 'all', 'none'],
         default: 'none'
     }
 });
 
-module.exports = interestSchema;
+module.exports = InterestSchema;

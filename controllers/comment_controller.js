@@ -1,6 +1,7 @@
 const ArticleModel = require("./../database/models/article_model");
 
-async function createComment(req, res) {
+// API to create comment
+async function createComment(req, res, next) {
     let { articleId } = req.params;
     let { body } = req.body;
 
