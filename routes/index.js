@@ -10,13 +10,23 @@ const passport = require("passport");
 
 router.get("/", (req, res) => res.send("Welcome"));
 router.get("/error", (req, res) => res.send("Welcome"));
+
+// **** Authentication Routes ****
 router.use("/auth", AuthRoutes);
+
+// **** User Routes ****
 router.use("/user", passport.authenticate("jwt", { session: false }), UserRoutes);
+
+// **** Feed Routes ****
 // router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
 //test out rss feature without authentication
 router.use("/feed", FeedRoutes);
+
+// **** Article Routes ****
 // router.use("/article",authorise, ArticleRoutes);
 router.use("/article", ArticleRoutes);
+
+// **** Admin Routes ****
 router.use("/admin",passport.authenticate('jwt', {session: false}), admin_authorise, AdminRoutes);
 
 

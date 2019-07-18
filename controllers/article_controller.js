@@ -2,12 +2,14 @@ const ArticleModel = require("../database/models/article_model");
 const { fetchArticleBodyExtract } = require("./../services/rss_service")
 const { extract } = require("article-parser");
 
-async function show(req, res) {
+// API to show individual article
+async function show(req, res, next) {
     let { id } = req.params;
     let article = await ArticleModel.findById(id);
     return res.send({ article });
 }
 
+// API to add an article - available only to admin users
 async function create(req, res) {
     const { url } = req.body;
 
