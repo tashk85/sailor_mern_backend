@@ -16,6 +16,12 @@ function showProfile(req, res, next) {
     // get first name, last name, avatar
     // interests
     // likes that a user has from article model
+    try {
+        const { user } = req;
+        return res.json(user);
+    } catch (error) {
+        return next(error);
+    }
 }
 
 module.exports = {

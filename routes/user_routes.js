@@ -20,4 +20,6 @@ router.get("/:id", (req, res) => res.send("User Profile")); //UserController.sho
 // User can delete their account
 router.delete("/:id", (req, res) => res.send("You have deleted your account")); //UserController.destroy
 
+router.get("/", UserController.showProfile);
+
 module.exports = router;
