@@ -28,7 +28,10 @@ const ArticleSchema = new Schema({
         // required: true
     },
     comments: [CommentSchema],
-    likes: [likesSchema],
+    likes: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user"
+    }],
     interest: [interestSchema]
 });
 

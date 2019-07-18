@@ -14,6 +14,7 @@ function authorise(req, res, next) {
 }
 
 function admin_authorise(req, res, next) {
+    // check if the user is an admin
     if (req.user.admin === true) {
         return next();
     }

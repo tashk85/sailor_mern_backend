@@ -17,7 +17,7 @@ router.use("/user", UserRoutes);
 router.use("/feed", FeedRoutes);
 // router.use("/article",authorise, ArticleRoutes);
 router.use("/article", ArticleRoutes);
-router.use("/admin", admin_authorise, AdminRoutes);
+router.use("/admin",passport.authenticate('jwt', {session: false}), admin_authorise, AdminRoutes);
 
 
 module.exports = router;

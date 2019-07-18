@@ -38,27 +38,22 @@ passport.use(new LocalStrategy({
 
 passport.use(new JwtStrategy(
     {
-        jwtFromRequest: (req) => {
-            let token = null;
-            
-            if (req && req.cookies) {
-                token = req.cookies['jwt'];
-            }
-
-            return token;
-        },
+        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
         secretOrKey: process.env.JWT_SECRET
     },
     async (jwt_payload, done) => {
-        const user = await UserModel.findById(jwt_payload.sub)
-            .catch(done);
-
-        if (!user) {
-            return done(null, false);
+        try{
+            const user = await UserModel.findById(jwt_payload.sub);
+    
+            if (!user) {
+                return done(null, false);
+            }
+    
+            return done(null, user);           
+        } catch (error) {
+            return done(error);
         }
-
-        return done(null, user);
-     }
+    }
 ));
 
 passport.use(new LinkedInStrategy(
