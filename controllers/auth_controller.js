@@ -15,7 +15,6 @@ async function registerCreate(req, res, next) {
             return next(error);
         }
         const token = JWTService.generateToken(user);
-        console.log(req.body);
         return res.json({ token });  
     })   
 
