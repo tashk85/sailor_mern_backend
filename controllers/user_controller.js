@@ -1,4 +1,5 @@
 const UserModel = require("./../database/models/user_model");
+const ArticleModel = require("./../database/models/article_model");
 
 // API to save interests for a user
 async function interestsCreate(req, res, next) {
@@ -12,13 +13,18 @@ async function interestsCreate(req, res, next) {
 }
 
 // API to show user info
-function showProfile(req, res, next) {
+async function showProfile(req, res, next) {
     // get first name, last name, avatar
     // interests
     // likes that a user has from article model
     try {
         const { user } = req;
-        return res.json(user);
+        console.log(user);
+
+        const likes = await ArticleModel.find({ likes: user._id });
+        console.log(likes);
+
+        return res.json({ user, likes });
     } catch (error) {
         return next(error);
     }

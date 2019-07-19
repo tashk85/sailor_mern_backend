@@ -15,16 +15,19 @@ const ArticleSchema = new Schema({
         source: String,
         url: {
             type: String,
-            // required: true,
+            required: true,
             unique: true
         },
-        image: String,
-        rssCategories: Array,
-        localCategories: Array
+        image: {
+            type: String,
+            required: true
+        }
+        // rssCategories: Array,
+        // localCategories: Array
     },
     article_body: {
         type: String,
-        // required: true
+        required: true
     },
     comments: [CommentSchema],
     likes: [{
