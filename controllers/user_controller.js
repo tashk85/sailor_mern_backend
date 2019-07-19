@@ -1,24 +1,25 @@
 const UserModel = require("./../database/models/user_model");
 const ArticleModel = require("./../database/models/article_model");
+const InterestModel = require("./../database/models/interest_model");
 
 // API to save interests for a user
 async function interestsCreate(req, res, next) {
     
-    let { userId } = req.params;
+    let { user } = req;
     let { interests } = req.body;
 
-    await UserModel.findByIdAndUpdate(userId, {interests});
+    await UserModel.findByIdAndUpdate(user._id, {interests});
 
     res.json({ interests });
 }
 
 // API to show user info
 async function showProfile(req, res, next) {
-    // get first name, last name, avatar
-    // interests
-    // likes that a user has from article model
+    // get user info { first name, last name, avatar, interests }
     try {
         const { user } = req;
+        
+        // retrieve articles that current user has liked from article model
         const likes = await ArticleModel.find({ likes: user._id });
         console.log(user, likes);
         console.log("HEEERE")
@@ -29,7 +30,7 @@ async function showProfile(req, res, next) {
     } 
 }
 
-
+// API to show current user
 function getCurrentUser(req, res, next) {
     try {
         const { user } = req;
@@ -39,8 +40,15 @@ function getCurrentUser(req, res, next) {
     }
 }
 
+// API to show interests
+function interestsIndex(req, res, next) {
+    const interestTags = InterestModel.schema.path('tag').enumValues;
+    res.json(interestTags);
+}
+
 module.exports = {
     interestsCreate,
     showProfile,
-    getCurrentUser
+    getCurrentUser,
+    interestsIndex
 }
