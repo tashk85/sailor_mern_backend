@@ -2,16 +2,18 @@ const express = require("express");
 const router = express.Router();
 const UserController = require("./../controllers/user_controller");
 
-// Interests Creation for redux
+// Post selected interests to user model in database
 router.post("/interests", UserController.interestsCreate);
 
-// Interests Update
-router.get("/interests", UserController.interestsIndex);
+// Retrieve ALL possible interests
+router.get("/interests/all", UserController.interestsIndex);
+// Retrieve interests that a user has stored in their entry in db
+router.get("/interests", UserController.getUserInterests);
 // how will we distinguish different routes when we create or update?
 
 // Update Interests
-router.put("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsUpdate
-router.patch("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsUpdate
+// router.put("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsUpdate
+// router.patch("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsUpdate
 
 // Show User Profile page
 router.get("/profile", UserController.showProfile);
