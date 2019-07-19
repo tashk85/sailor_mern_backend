@@ -19,12 +19,21 @@ async function showProfile(req, res, next) {
     // likes that a user has from article model
     try {
         const { user } = req;
-        console.log(user);
-
         const likes = await ArticleModel.find({ likes: user._id });
-        console.log(likes);
-
+        console.log(user, likes);
+        console.log("HEEERE")
         return res.json({ user, likes });
+    } catch (error) {
+        console.log("errorrr")
+        return next(error);
+    } 
+}
+
+
+function getCurrentUser(req, res, next) {
+    try {
+        const { user } = req;
+        return res.json(user);
     } catch (error) {
         return next(error);
     }
@@ -32,5 +41,6 @@ async function showProfile(req, res, next) {
 
 module.exports = {
     interestsCreate,
-    showProfile
+    showProfile,
+    getCurrentUser
 }

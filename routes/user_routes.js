@@ -14,12 +14,13 @@ router.put("/interests", (req, res) => res.send("Your Interests are ...")); //Us
 router.patch("/interests", (req, res) => res.send("Your Interests are ...")); //UserController.interestsUpdate
 
 // Show User Profile page
-router.get("/:id", (req, res) => res.send("User Profile")); //UserController.show
+router.get("/profile", UserController.showProfile);
+// router.get("/:id", (req, res) => res.send("User Profile")); //UserController.show
 // add user password change option later?
 
 // User can delete their account
 router.delete("/:id", (req, res) => res.send("You have deleted your account")); //UserController.destroy
 
-router.get("/", UserController.showProfile);
+router.get("/", UserController.getCurrentUser);
 
 module.exports = router;
