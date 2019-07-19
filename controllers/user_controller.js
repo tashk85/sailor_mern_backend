@@ -7,7 +7,7 @@ async function interestsCreate(req, res, next) {
     
     let { user } = req;
     let { interests } = req.body;
-
+    console.log(interests);
     await UserModel.findByIdAndUpdate(user._id, {interests});
 
     res.json({ interests });
@@ -40,7 +40,7 @@ function getCurrentUser(req, res, next) {
     }
 }
 
-// API to show interests
+// API to show interests for form
 function interestsIndex(req, res, next) {
     const interestTags = InterestModel.schema.path('tag').enumValues;
     res.json(interestTags);
