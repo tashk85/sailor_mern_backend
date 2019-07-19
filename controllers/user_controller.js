@@ -10,7 +10,7 @@ async function interestsCreate(req, res, next) {
     console.log(interests);
     await UserModel.findByIdAndUpdate(user._id, {interests});
 
-    res.json({ interests });
+    return res.json({ interests });
 }
 
 // API to show user info
@@ -43,7 +43,8 @@ function getCurrentUser(req, res, next) {
 // API to show interests for form
 function interestsIndex(req, res, next) {
     const interestTags = InterestModel.schema.path('tag').enumValues;
-    res.json(interestTags);
+    console.log(interestTags);
+    return res.json(interestTags);
 }
 
 module.exports = {

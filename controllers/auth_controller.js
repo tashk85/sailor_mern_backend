@@ -3,17 +3,17 @@ const JWTService = require("./../services/jwt_service");
 
 
 // API to create a new user
-function registerCreate(req, res, next) {
+async function registerCreate(req, res, next) {
     // pull user info from request body
     const { email, password, firstName,lastName, admin=false } = req.body;
 
-    const user = new UserModel({ email, firstName, lastName, admin});
+    const user = await UserModel.create({ email, password, firstName, lastName, admin});
     
-    UserModel.register(user, password, (error, user) => {
+    req.login(user, (error) => {
         if (error) {
             return next(new HTTPError(
                 400,
-                "A user has already been registered with the given email address"
+                err.message
             ));
         }
         // return token generated from user information
