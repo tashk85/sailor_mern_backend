@@ -1,21 +1,28 @@
 const UserModel = require("./../database/models/user_model");
+const ArticleModel = require("./../database/models/article_model");
+const InterestModel = require("./../database/models/interest_model");
 
-// API to save interests for a user
-async function interestsCreate(req, res, next) {
-    
-    let { userId } = req.params;
-    let { interests } = req.body;
 
-    await UserModel.findByIdAndUpdate(userId, {interests});
-
-    res.json({ interests });
-}
 
 // API to show user info
-function showProfile(req, res, next) {
-    // get first name, last name, avatar
-    // interests
-    // likes that a user has from article model
+async function showProfile(req, res, next) {
+    // get user info { first name, last name, avatar, interests }
+    try {
+        const { user } = req;
+        
+        // retrieve articles that current user has liked from article model
+        const likes = await ArticleModel.find({ likes: user._id });
+        console.log(user, likes);
+        console.log("HEEERE")
+        return res.json({ user, likes });
+    } catch (error) {
+        console.log("errorrr")
+        return next(error);
+    } 
+}
+
+// API to show current user
+function getCurrentUser(req, res, next) {
     try {
         const { user } = req;
         return res.json(user);
@@ -24,7 +31,33 @@ function showProfile(req, res, next) {
     }
 }
 
+// API to show all possible interests for form
+function interestsIndex(req, res, next) {
+    const interestTags = InterestModel.schema.path('tag').enumValues;
+    return res.json(interestTags);
+}
+
+// API to save interests for a user
+async function interestsCreate(req, res, next) {
+    let { user } = req;
+    let userInterests = req.body;
+
+    await UserModel.findByIdAndUpdate(user._id, { interests: userInterests });
+
+    return res.json(userInterests);
+}
+
+async function getUserInterests(req, res, next) {
+    let { user } = req;
+    let interests = user.interests;
+    console.log(interests, "get user interests");
+    return res.json({ interests });
+}
+
 module.exports = {
     interestsCreate,
-    showProfile
+    showProfile,
+    getCurrentUser,
+    interestsIndex,
+    getUserInterests
 }

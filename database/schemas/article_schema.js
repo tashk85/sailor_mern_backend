@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const CommentSchema = require("./comment_schema");
-const interestSchema = require("./interest_schema");
 const Schema = mongoose.Schema;
 
 
@@ -15,23 +14,26 @@ const ArticleSchema = new Schema({
         source: String,
         url: {
             type: String,
-            // required: true,
+            required: true,
             unique: true
         },
-        image: String,
-        rssCategories: Array,
-        localCategories: Array
+        image: {
+            type: String,
+            required: true
+        }
+        // rssCategories: Array,
+        // localCategories: Array
     },
     article_body: {
         type: String,
-        // required: true
+        required: true
     },
     comments: [CommentSchema],
     likes: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "user"
     }],
-    interest: [interestSchema]
+    interests: []
 });
 
 module.exports = ArticleSchema;
