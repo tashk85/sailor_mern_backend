@@ -40,24 +40,25 @@ async function fetchRSS(url) {
     return console.log("All articles saved to database");
 };
 
-
+// extract article body using embedly from article-parser
 function fetchArticleBodyEmbedly(url) {
     return extractWithEmbedly(url)
         .then((article) => {
             return article;
         })
-        .catch((err) => {
-        console.log(err);
+        .catch((error) => {
+        console.log(error);
         });
 }
 
+// extract article body using extract from article-parser
 function fetchArticleBodyExtract(url) {
     return extract(url)
         .then((article) => {
             return article;
         })
-        .catch((err) => {
-            console.log(err);
+        .catch((error) => {
+            console.log(error);
         });
 }
 

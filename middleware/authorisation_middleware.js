@@ -14,7 +14,8 @@ function authorise(req, res, next) {
 }
 
 function admin_authorise(req, res, next) {
-    if (req.user.admin == true) {
+    // check if the user is an admin
+    if (req.user.admin === true) {
         return next();
     }
     return res.redirect("/feed");
