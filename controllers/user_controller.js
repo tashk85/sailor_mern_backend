@@ -13,10 +13,10 @@ async function showProfile(req, res, next) {
         // retrieve articles that current user has liked from article model
         const likes = await ArticleModel.find({ likes: user._id });
         console.log(user, likes);
-        console.log("HEEERE")
+
         return res.json({ user, likes });
     } catch (error) {
-        console.log("errorrr")
+
         return next(error);
     } 
 }
