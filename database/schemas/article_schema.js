@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const CommentSchema = require("./comment_schema");
-const interestSchema = require("./interest_schema");
+const InterestSchema = require("./interest_schema");
 const Schema = mongoose.Schema;
 
 
@@ -31,7 +31,7 @@ const ArticleSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "user"
     }],
-    interest: [interestSchema]
+    interest: [InterestSchema]
 });
 
 module.exports = ArticleSchema;
