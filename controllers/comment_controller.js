@@ -1,4 +1,27 @@
 const ArticleModel = require("./../database/models/article_model");
+const UserModel = require("./../database/models/user_model");
+
+
+//render comments with users info
+async function index(req, res, next) {
+    let { articleId } = req.params;
+    //find the article
+    let article = await ArticleModel.findById(articleId);
+    // send back all users' first&last name&userId for mention functions
+    
+    let users = await UserModel.find({});
+    console.log(users);
+    // users.forEach((user)=>{
+    //     delete user.lastName;
+    //     console.log(`test delete:${user}`);
+    // })
+
+    // console.log(`retrieved users: ${users}`);
+    // // console.log(`send to front users infor: ${allUsers}`);
+
+    return res.send({ article, users});
+
+}
 
 // API to create comment
 async function createComment(req, res) {
@@ -36,6 +59,7 @@ async function destroyComment(req, res) {
 
 
 module.exports = {
+    index,
     createComment,
     destroyComment
 }

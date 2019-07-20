@@ -8,10 +8,13 @@ const { celebrate, Joi } = require("celebrate");
 // To show an article 
 router.get("/:id", ArticleController.show); //ArticleController.show
 
-// Renders comments for an article
+// Render comments for an article
+router.get("/:articleId/comment", CommentController.index); // CommentController.createComment
+
+// Post comments for an article
 router.post("/:articleId/comment_create", CommentController.createComment); // CommentController.createComment
 
-// need to add general_user delete function
+//Admin delete comment (need to add general users to delete their own comment function in the future)
 router.delete("/:articleId/comment_delete",  CommentController.destroyComment); 
 
 // To show and update likes for an article
