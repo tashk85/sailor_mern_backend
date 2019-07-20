@@ -9,6 +9,7 @@ router.get("/:id", ArticleController.show); //ArticleController.show
 
 // Renders comments for an article
 router.post("/:articleId/comment", CommentController.createComment); // CommentController.createComment
+router.delete("/:articleId/comment", CommentController.deleteComment);
 
 // To show and update likes for an article
 router.post("/:articleId/likes", LikesController.update); // LikesController.update

@@ -17,6 +17,10 @@ async function createComment(req, res, next) {
     res.redirect(`/article/${articleId}`);
 }
 
+async function deleteComment() {
+    
+}
+
 
 module.exports = {
     createComment
