@@ -16,6 +16,10 @@ const CommentSchema = new Schema({
         firstName: String,
         lastName: String,
         linkedin_url: String
+    },
+    mention:{
+        type:String,
+        default: ""
     }
 });
 

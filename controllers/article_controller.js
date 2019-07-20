@@ -1,12 +1,28 @@
 const ArticleModel = require("../database/models/article_model");
+const UserModel = require("../database/models/user_model");
 const { fetchArticleBodyExtract } = require("./../services/rss_service")
 const { extract } = require("article-parser");
 
 // API to show individual article
 async function show(req, res, next) {
     let { id } = req.params;
+    //find the article
     let article = await ArticleModel.findById(id);
-    return res.send({ article });
+    // send back all users' first&last name&userId for mention functions
+    let users = await UserModel.find({});
+//     let allUsers = {"default": "none"};
+//    console.log(`before sending users: ${allUsers}`);
+    
+    users.forEach((user)=>{
+        delete user.lastName;
+        console.log(`test delete:${user}`);
+    })
+
+    console.log(`retrieved users: ${users}`);
+    // console.log(`send to front users infor: ${allUsers}`);
+
+
+    return res.send({ article, users});
 }
 
 // API to add an article - available only to admin users
