@@ -42,11 +42,15 @@ async function createComment(req, res) {
             mentioned_artile: article.metadata.title,
             mentioned_url: `/article/${articleId}`
         };     
-        console.log(`artile info: ${mentionedArticle.mentioned_artile}`);
-        console.log(`commentor info: ${user_metadata.firstName}`);
-        console.log(`commentor info: ${user_metadata}`);
-    let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata});
-    await mentionee.save();
+
+        user_metadata = JSON.stringify(user_metadata);
+        mentionedArticle = JSON.stringify(mentionedArticle);
+  
+        console.log(`mentioned artile info: ${mentionedArticle}`);
+        console.log(` commentor info: ${user_metadata}`);
+    // let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata });
+    // await mentionee.save();
+    // console.log(mentionee);
         //retrieve article's info from req.params
 
     res.redirect(`/article/${articleId}`);
