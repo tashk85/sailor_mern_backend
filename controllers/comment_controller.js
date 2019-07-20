@@ -18,19 +18,31 @@ async function createComment(req, res) {
 
 async function destroyComment(req, res) {
     let { articleId } = req.params;
-    let { _id: commentId } = req.body;
-
+    let { _id: commentId, userDelete, admin} = req.body;
+    
     // access current article and the comment array
     let article = await ArticleModel.findById(articleId);
-    let comment = await article.comments
+    let comment = await article.comments;
+    // let commentor = comment.user_metadata._id;
 
-    //find the comment by commentId, & delete the comment
+    console.log(`comment: ${comment}`);
+    // console.log(`commentor: ${commentor}`)
+
+    //find the comment by commentId & delete by admin or general_user;
     let index = comment.indexOf(commentId);
-    comment.splice(index, 1);
+    if (admin === true){
+        comment.splice(index, 1);
         await article.save();
-
-    res.redirect(`/article/${articleId}`);
-    
+    } else {
+        if (userDelete === commentor){
+            comment.splice(index, 1);
+            await article.save();
+            res.redirect(`/article/${articleId}`);
+        }else {
+            res.redirect(`/article/${articleId}`);
+        }
+    }
+    res.redirect(`/article/${articleId}`); 
 }
 
 

@@ -12,7 +12,7 @@ const CommentSchema = new Schema({
         required: true
     },
     user_metadata: {
-        _id: String,
+        user_id: String,
         firstName: String,
         lastName: String,
         linkedin_url: String
