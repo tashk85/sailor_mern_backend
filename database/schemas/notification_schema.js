@@ -7,7 +7,7 @@ const NotificationSchema = new Schema({
         lastName: String
     },
     mentionedArticle: {
-        mentioned_artile: String,
+        mentioned_artileTitle: String,
         mentioned_url: String,
     }
 });
