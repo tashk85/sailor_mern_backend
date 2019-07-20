@@ -42,27 +42,14 @@ async function index(req, res, next){
         selectedInterests.forEach((interest, i) => {
             if (article.interests.includes(interest) && !curatedArticles[`tag${i}`].articles.includes(article) && curatedArticles[`tag${i}`].articles.length < 3) {
                 curatedArticles[`tag${i}`].articles.push(article);
-            } else {
-
-            }           
+            }
+            curatedArticles[`tag${i}`].tag = interest;  
         });
-        curatedArticles.remainingArticles.push(article);
+        if (!curatedArticles.tag0.articles.includes(article) && !curatedArticles.tag1.articles.includes(article) && !curatedArticles.tag2.articles.includes(article)) {
+            curatedArticles.remainingArticles.push(article);
+        }
+        return curatedArticles;
     });
-
-    // ALTERNATIVElY:: iterate through interests first
-    // selectedInterests.forEach((interest, i) => {
-    //     articles.forEach(article => {
-    //         if (article.interests.includes(interest) && !curatedArticles[`tag${i}`].articles.includes(article) && curatedArticles[`tag${i}`].articles.length < 3) {
-    //             curatedArticles[`tag${i}`].articles.push(article);
-    //         }
-    //     });
-    //     curatedArticles[`tag${i}`].tag = interest;
-    //     return curatedArticles;
-    // });
-    // END
-    // console.log("###########################")
-    // console.log(curatedArticles, "IM HEEERE ********");
-    // console.log("###########################")
 
     return res.send({ articles, curatedArticles });
 }
