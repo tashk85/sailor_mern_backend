@@ -9,6 +9,7 @@ async function show(req, res, next) {
     //find the article
     let article = await ArticleModel.findById(id);
     // send back all users' first&last name&userId for mention functions
+    
     let users = await UserModel.find({});
 //     let allUsers = {"default": "none"};
 //    console.log(`before sending users: ${allUsers}`);
@@ -21,8 +22,8 @@ async function show(req, res, next) {
     console.log(`retrieved users: ${users}`);
     // console.log(`send to front users infor: ${allUsers}`);
 
-
-    return res.send({ article, users});
+    return res.send({ article});
+    // return res.send({ article, users});
 }
 
 // API to add an article - available only to admin users

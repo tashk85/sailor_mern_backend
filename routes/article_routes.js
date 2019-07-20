@@ -11,7 +11,8 @@ router.get("/:id", ArticleController.show); //ArticleController.show
 // Renders comments for an article
 router.post("/:articleId/comment_create", CommentController.createComment); // CommentController.createComment
 
-router.delete("/:articleId/comment_delete",  CommentController.destroyComment); //--> move to admin routes
+// need to add general_user delete function
+router.delete("/:articleId/comment_delete",  CommentController.destroyComment); 
 
 // To show and update likes for an article
 router.post("/:articleId/likes", LikesController.update); // LikesController.update
