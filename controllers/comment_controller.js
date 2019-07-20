@@ -1,4 +1,27 @@
 const ArticleModel = require("./../database/models/article_model");
+const UserModel = require("./../database/models/user_model");
+
+
+//render comments with users info
+async function index(req, res, next) {
+    let { articleId } = req.params;
+    //find the article
+    let article = await ArticleModel.findById(articleId);
+    // send back all users' first&last name&userId for mention functions
+    
+    let users = await UserModel.find({});
+    console.log(users);
+    // users.forEach((user)=>{
+    //     delete user.lastName;
+    //     console.log(`test delete:${user}`);
+    // })
+
+    // console.log(`retrieved users: ${users}`);
+    // // console.log(`send to front users infor: ${allUsers}`);
+
+    return res.send({ article, users});
+
+}
 
 // API to create comment
 async function createComment(req, res) {
@@ -18,23 +41,25 @@ async function createComment(req, res) {
 
 async function destroyComment(req, res) {
     let { articleId } = req.params;
-    let { _id: commentId } = req.body;
-
+    let { _id: commentId, admin} = req.body;
+    
     // access current article and the comment array
     let article = await ArticleModel.findById(articleId);
-    let comment = await article.comments
+    let comment = await article.comments;
 
-    //find the comment by commentId, & delete the comment
+    //find the comment by commentId & delete by admin Only;
     let index = comment.indexOf(commentId);
-    comment.splice(index, 1);
+    if (admin === true){
+        comment.splice(index, 1);
         await article.save();
+    } 
 
-    res.redirect(`/article/${articleId}`);
-    
+    res.redirect(`/article/${articleId}`); 
 }
 
 
 module.exports = {
+    index,
     createComment,
     destroyComment
 }

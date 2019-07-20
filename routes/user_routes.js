@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const UserController = require("./../controllers/user_controller");
+const NotificationController = require("./../controllers/notification_controller");
 
 // Post selected interests to user model in database
 router.post("/interests", UserController.interestsCreate);
@@ -24,5 +25,11 @@ router.get("/profile", UserController.showProfile);
 router.delete("/:id", (req, res) => res.send("You have deleted your account")); //UserController.destroy
 
 router.get("/", UserController.getCurrentUser);
+
+//User check notification
+router.post("/:articleId/likes", NotificationController.update); // NotificationController.update
+router.put("/:articleId/likes", NotificationController.update); // NotificationController.update
+router.patch("/:articleId/likes", NotificationController.update); // NotificationController.update
+
 
 module.exports = router;
