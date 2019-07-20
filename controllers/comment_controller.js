@@ -28,7 +28,6 @@ async function createComment(req, res) {
     let { articleId } = req.params;
     // access comments' body, user_metadata & mention info
     let { body, user_metadata, mention } = req.body;
-
     //add comment to ArticleModel with commentors' info
     let article = await ArticleModel.findById(articleId);
     article.comments.push({ body, user_metadata});
@@ -45,7 +44,8 @@ async function createComment(req, res) {
         };     
         console.log(`artile info: ${mentionedArticle.mentioned_artile}`);
         console.log(`commentor info: ${user_metadata.firstName}`);
-    let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata,  mentionedArticle  });
+        console.log(`commentor info: ${user_metadata}`);
+    let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata});
     await mentionee.save();
         //retrieve article's info from req.params
 
