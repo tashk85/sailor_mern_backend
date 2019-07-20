@@ -48,7 +48,10 @@ ArticleModel.find()
         articles.forEach(article => {
             let numOfInterests = Math.floor(Math.random() * 3 + 1);
             for(let i = 0; i <= numOfInterests; i++) {
-                article.interests.push(interestTags[Math.floor(Math.random()*interestTags.length)])
+                let interest = interestTags[Math.floor(Math.random()*interestTags.length)];
+                if (!article.interests.includes(interest)) {
+                    article.interests.push(interest)
+                }
             }
             console.log("I'm in an article:")
             console.log(article);
