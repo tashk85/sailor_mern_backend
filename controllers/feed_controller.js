@@ -7,7 +7,16 @@ async function index(req, res, next){
     return res.send({ articles });
 }
 
+async function showArticlesByInterest(req, res, next) {
+    const { interest } = req.params;
+    const interestTag = interest.replace("-", " ");
+    const selectedArticles = await ArticleModel.find({ "interests": interestTag });
+
+    return res.send({ selectedArticles });
+}
+
 
 module.exports = {
-    index
+    index,
+    showArticlesByInterest
 }
