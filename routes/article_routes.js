@@ -8,8 +8,8 @@ const LikesController=require("./../controllers/likes_controller");
 router.get("/:id", ArticleController.show); //ArticleController.show
 
 // Renders comments for an article
-router.post("/:articleId/comment", CommentController.createComment); // CommentController.createComment
-router.delete("/:articleId/comment", CommentController.deleteComment);
+router.post("/:articleId/comment_create", CommentController.createComment); // CommentController.createComment
+router.delete("/:articleId/comment_delete", CommentController.destroyComment);
 
 // To show and update likes for an article
 router.post("/:articleId/likes", LikesController.update); // LikesController.update
