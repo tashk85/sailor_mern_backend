@@ -1,10 +1,12 @@
 const ArticleModel = require("../database/models/article_model");
+const UserModel = require("../database/models/user_model");
 const { fetchArticleBodyExtract } = require("./../services/rss_service")
 const { extract } = require("article-parser");
 
 // API to show individual article
 async function show(req, res, next) {
     let { id } = req.params;
+    //find the article
     let article = await ArticleModel.findById(id);
     return res.send({ article });
 }

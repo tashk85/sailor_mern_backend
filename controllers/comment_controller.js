@@ -1,14 +1,36 @@
 const ArticleModel = require("./../database/models/article_model");
+const UserModel = require("./../database/models/user_model");
+
+
+//render comments with users info
+async function index(req, res, next) {
+    let { articleId } = req.params;
+    //find the article
+    let article = await ArticleModel.findById(articleId);
+    // send back all users' first&last name&userId for mention functions
+    
+    let users = await UserModel.find({});
+    console.log(users);
+    // users.forEach((user)=>{
+    //     delete user.lastName;
+    //     console.log(`test delete:${user}`);
+    // })
+
+    // console.log(`retrieved users: ${users}`);
+    // // console.log(`send to front users infor: ${allUsers}`);
+
+    return res.send({ article, users});
+
+}
 
 // API to create comment
-async function createComment(req, res, next) {
+async function createComment(req, res) {
     let { articleId } = req.params;
     let { body, user_metadata} = req.body;
-    console.log(req.body);
-    console.log(articleId);
-    console.log(body);
-    console.log(user_metadata);
-
+    // console.log(req.body);
+    // console.log(articleId);
+    // console.log(body);
+    // console.log(user_metadata);
     let article = await ArticleModel.findById(articleId);
     article.comments.push({ body, user_metadata});
 
@@ -17,7 +39,27 @@ async function createComment(req, res, next) {
     res.redirect(`/article/${articleId}`);
 }
 
+async function destroyComment(req, res) {
+    let { articleId } = req.params;
+    let { _id: commentId, admin} = req.body;
+    
+    // access current article and the comment array
+    let article = await ArticleModel.findById(articleId);
+    let comment = await article.comments;
+
+    //find the comment by commentId & delete by admin Only;
+    let index = comment.indexOf(commentId);
+    if (admin === true){
+        comment.splice(index, 1);
+        await article.save();
+    } 
+
+    res.redirect(`/article/${articleId}`); 
+}
+
 
 module.exports = {
-    createComment
+    index,
+    createComment,
+    destroyComment
 }
