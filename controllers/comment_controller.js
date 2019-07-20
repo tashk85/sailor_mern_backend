@@ -45,7 +45,7 @@ async function createComment(req, res) {
         // push commentors & mentionedAritcle info into notifications;
         mentionee.notifications.push({user_metadata, mentionedArticle})
         await mentionee.save();
-        console.log(`${mentionee.notification}`);
+        console.log(`${mentionee}`);
 
         // user_metadata = JSON.stringify(user_metadata);
         // mentionedArticle = JSON.stringify(mentionedArticle);
