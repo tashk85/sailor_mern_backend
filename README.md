@@ -165,20 +165,28 @@ Our design process began with gathering requirements from the client, which we f
 ### Landing Page
 ![Landing Page](./docs/Landing-Page.png)
 
+### Signup Page
 ![Sign Up Page](./docs/Signup-Page.png)
 
+### Login Page
 ![Login Page](./docs/Login-Page.png)
 
+### Interests Form
 ![Interests Form](./docs/Interests-Form.png)
 
+### Feed Page
 ![Feed Page](./docs/Feed-Page.png)
 
+### Individual Article
 ![Individual Article Page](./docs/Individual-Article.png)
 
+### Profile Page
 ![Profile Page](./docs/Profile-Page.png)
 
+### Notifications Page
 ![Notifications Page](./docs/Notifications-Page.png)
 
+### Admin View - Add An Article
 ![Admin View](./docs/Desktop_Admin-View.png)
 
 ## Database Entity Relationship Diagram:
