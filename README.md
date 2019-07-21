@@ -275,6 +275,8 @@ For this project, we used Monday.com's boards for project management. We split t
 - **React-redux** is being used to handle state in a centralised store.
 - **React-scripts** enables us to run scripts from the command line.
 - **Redux-thunk** allows us to write asynchronous action creators that return a function instead of an action.
+- **React-html-parser** is being used to convert HTML strings from the article-parser into React components.
+- **Query-string** is being used to parse and stringify URL query strings.
 - **Ant Design** is a React component library that allows us to style our components quickly. It makes the development process easier and enhances the experience (UI/UX) for the user.
 - **Styled-components** allows us to style individual components and elements, as well as customise imported Ant Design components.
 - **Jest** is being used as our testing framework.
