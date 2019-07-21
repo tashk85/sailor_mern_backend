@@ -26,15 +26,36 @@ async function index(req, res, next) {
 // API to create comment
 async function createComment(req, res) {
     let { articleId } = req.params;
-    let { body, user_metadata} = req.body;
-    // console.log(req.body);
-    // console.log(articleId);
-    // console.log(body);
-    // console.log(user_metadata);
+    // access comments' body, user_metadata & mention info
+    let { body, user_metadata, mention } = req.body;
+    //add comment to ArticleModel with commentors' info
     let article = await ArticleModel.findById(articleId);
     article.comments.push({ body, user_metadata});
-
     await article.save();
+
+    //add mention to UserModel
+    console.log(`${mention.firstName} has been mentioned`);
+        //find the mentionee in UserModel
+        let mentionee = await UserModel.findById(mention.mentionee_id);
+        //retrieve article's info from req.params
+        let mentionedArticle = {
+            mentioned_artile: article.metadata.title,
+            mentioned_url: `/article/${articleId}`
+        };     
+        // push commentors & mentionedAritcle info into notifications;
+        mentionee.notifications.push({user_metadata, mentionedArticle})
+        await mentionee.save();
+        console.log(`${mentionee}`);
+
+        // user_metadata = JSON.stringify(user_metadata);
+        // mentionedArticle = JSON.stringify(mentionedArticle);
+  
+        // console.log(`mentioned artile info: ${mentionedArticle}`);
+        // console.log(` commentor info: ${user_metadata}`);
+    // let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata });
+    // await mentionee.save();
+    // console.log(mentionee);
+        //retrieve article's info from req.params
 
     res.redirect(`/article/${articleId}`);
 }
