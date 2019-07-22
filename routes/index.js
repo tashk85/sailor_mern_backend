@@ -15,7 +15,9 @@ router.get("/error", (req, res) => res.send("Welcome"));
 router.use("/auth", AuthRoutes);
 
 // **** User Routes ****
-router.use("/user", passport.authenticate("jwt", { session: false }), UserRoutes);
+router.use("/user", UserRoutes);
+// authorisation turned off to test notification function
+// router.use("/user", passport.authenticate("jwt", { session: false }), UserRoutes);
 
 // **** Feed Routes ****
 router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
