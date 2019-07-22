@@ -34,15 +34,12 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.6.5",
     "mongoose-bcrypt": "^1.6.0",
-    "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-linkedin-oauth2": "^2.0.0",
     "passport-local": "^1.0.0",
     "rss-parser": "^3.7.2",
     "forever": "^1.0.0",
-    "mongoose": "^5.6.4",
-    "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   }
 }
