@@ -11,8 +11,8 @@ function setUpAdminUser(i) {
     return UserModel.create({ 
         email: `admin${i}@test.com`,
         firstName: "admin", 
-        lastName: "first",
-        password: "admin",
+        lastName: "user",
+        password: "admintest",
         admin: true
     });
 }

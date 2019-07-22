@@ -47,6 +47,6 @@ app.use(require("./middleware/error_middleware"));
 
 require("./services/rss_cron");
 
-require("./services/seed_service");
+// require("./services/seed_service");
 
 module.exports = app;

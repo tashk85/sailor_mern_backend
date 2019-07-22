@@ -8,9 +8,9 @@ function setUpAdminUser(i) {
     
     return UserModel.create({ 
         email: `admin${i}@test.com`,
-        firstName: "admin", 
-        lastName: "first",
-        password: "admin",
+        firstName: "Admin", 
+        lastName: "User",
+        password: "admintest",
         admin: true
     });
 }
@@ -30,8 +30,9 @@ ArticleModel.find()
             for(let i = 0; i <= numOfInterests; i++) {
                 let interest = interestTags[Math.floor(Math.random()*interestTags.length)];
                 if (!article.interests.includes(interest)) {
-                    article.interests.push(interest)
+                    article.interests.push(interest);
                 }
+                console.log("added an interest")
             }
             article.save().catch(err => console.log("&&&&&&&&&&", err));
         })
