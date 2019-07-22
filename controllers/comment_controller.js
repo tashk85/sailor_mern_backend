@@ -56,6 +56,8 @@ async function createComment(req, res) {
 async function destroyComment(req, res) {
     let { articleId } = req.params;
     let { _id: commentId, admin} = req.body;
+    // let {_id:userId } = req.body.user;
+    // console.log(`${userId}`);
     
     // access current article and the comment array
     let article = await ArticleModel.findById(articleId);
