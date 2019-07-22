@@ -10,7 +10,19 @@ async function index(req, res, next) {
     
     // send back all users' first&last name&userId for mention functions
     let users = await UserModel.find({});
-    return res.send({ article, users});
+    let filteredUsers = [];
+    users.forEach((user)=>{
+        let { firstName, lastName, _id:userId } = user;
+        filterdUser = {firstName, lastName, userId};
+        console.log(`is each user filtered? ${filterdUser}`);
+        filteredUsers.push(filterdUser);
+        console.log(`is ALL users filtered? ${filteredUsers} INSIDE loop`);
+        return filteredUsers;
+    })
+
+    console.log(`is ALL users filtered? ${filteredUsers} OUTSIDE loop`);
+
+    return res.send({ article, filteredUsers});
 }
 
 // API to create comment
@@ -44,6 +56,8 @@ async function createComment(req, res) {
 async function destroyComment(req, res) {
     let { articleId } = req.params;
     let { _id: commentId, admin} = req.body;
+    // let {_id:userId } = req.body.user;
+    // console.log(`${userId}`);
     
     // access current article and the comment array
     let article = await ArticleModel.findById(articleId);
