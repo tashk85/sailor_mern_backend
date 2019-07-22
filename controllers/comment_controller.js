@@ -7,62 +7,57 @@ async function index(req, res, next) {
     let { articleId } = req.params;
     //find the article
     let article = await ArticleModel.findById(articleId);
-    // send back all users' first&last name&userId for mention functions
     
+    // send back all users' first&last name&userId for mention functions
     let users = await UserModel.find({});
-    console.log(users);
-    // users.forEach((user)=>{
-    //     delete user.lastName;
-    //     console.log(`test delete:${user}`);
-    // })
+    let filteredUsers = [];
+    users.forEach((user)=>{
+        let { firstName, lastName, _id:userId } = user;
+        filterdUser = {firstName, lastName, userId};
+        console.log(`is each user filtered? ${filterdUser}`);
+        filteredUsers.push(filterdUser);
+        console.log(`is ALL users filtered? ${filteredUsers} INSIDE loop`);
+        return filteredUsers;
+    })
 
-    // console.log(`retrieved users: ${users}`);
-    // // console.log(`send to front users infor: ${allUsers}`);
+    console.log(`is ALL users filtered? ${filteredUsers} OUTSIDE loop`);
 
-    return res.send({ article, users});
-
+    return res.send({ article, filteredUsers});
 }
 
 // API to create comment
 async function createComment(req, res) {
-    let { articleId } = req.params;
     // access comments' body, user_metadata & mention info
+    let { articleId } = req.params;
     let { body, user_metadata, mention } = req.body;
+
     //add comment to ArticleModel with commentors' info
     let article = await ArticleModel.findById(articleId);
     article.comments.push({ body, user_metadata});
     await article.save();
 
-    //add mention to UserModel
+    //add notification via mention to UserModel
     console.log(`${mention.firstName} has been mentioned`);
         //find the mentionee in UserModel
         let mentionee = await UserModel.findById(mention.mentionee_id);
         //retrieve article's info from req.params
         let mentionedArticle = {
-            mentioned_artile: article.metadata.title,
+            mentioned_artileTitle: article.metadata.title,
             mentioned_url: `/article/${articleId}`
         };     
-        // push commentors & mentionedAritcle info into notifications;
+        // push commentors' & mentionedAritcle' info into notifications;
         mentionee.notifications.push({user_metadata, mentionedArticle})
         await mentionee.save();
+
         console.log(`${mentionee}`);
-
-        // user_metadata = JSON.stringify(user_metadata);
-        // mentionedArticle = JSON.stringify(mentionedArticle);
-  
-        // console.log(`mentioned artile info: ${mentionedArticle}`);
-        // console.log(` commentor info: ${user_metadata}`);
-    // let mentionee = await UserModel.findByIdAndUpdate(mention.mentionee_id, { notifications: user_metadata });
-    // await mentionee.save();
-    // console.log(mentionee);
-        //retrieve article's info from req.params
-
     res.redirect(`/article/${articleId}`);
 }
 
 async function destroyComment(req, res) {
     let { articleId } = req.params;
     let { _id: commentId, admin} = req.body;
+    // let {_id:userId } = req.body.user;
+    // console.log(`${userId}`);
     
     // access current article and the comment array
     let article = await ArticleModel.findById(articleId);
