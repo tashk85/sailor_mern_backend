@@ -53,8 +53,6 @@ ArticleModel.find()
                     article.interests.push(interest)
                 }
             }
-            console.log("I'm in an article:")
-            console.log(article);
             article.save().catch(err => console.log("&&&&&&&&&&", err));
         })
         // articles.save()
