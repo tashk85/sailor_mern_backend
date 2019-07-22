@@ -18,9 +18,9 @@ router.use("/auth", AuthRoutes);
 router.use("/user", passport.authenticate("jwt", { session: false }), UserRoutes);
 
 // **** Feed Routes ****
-// router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
+router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
 //test out rss feature without authentication
-router.use("/feed", FeedRoutes);
+// router.use("/feed", FeedRoutes);
 
 // **** Article Routes ****
 // router.use("/article",authorise, ArticleRoutes);
