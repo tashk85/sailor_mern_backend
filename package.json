@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
+    "seed": "node database/seeds",
     "dev-server": "nodemon index.js",
-    "server": "forever -c \"nodemon --exitcrash -L \" index.js"
+    "server": "forever -c \"nodemon --exitcrash -L \" index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +18,29 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "@sokratis/passport-linkedin-oauth2": "^2.1.0",
+    "article-parser": "^2.4.0",
+    "axios": "^0.19.0",
+    "celebrate": "^10.0.1",
+    "connect-mongo": "^3.0.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "cron": "^1.7.1",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.6.4",
-    "morgan": "^1.9.1"
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "forever": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.6.5",
+    "mongoose-bcrypt": "^1.6.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "rss-parser": "^3.7.2"
   }
 }
