@@ -23,7 +23,7 @@ router.use("/feed", passport.authenticate('jwt', {session: false}), FeedRoutes);
 // router.use("/feed", FeedRoutes);
 
 // **** Article Routes ****
-router.use("/article",passport.authenticate('jwt', {session: false}), authorise, ArticleRoutes);
+router.use("/article",passport.authenticate('jwt', {session: false}),  ArticleRoutes);
 
 
 // **** Admin Routes ****
