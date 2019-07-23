@@ -9,8 +9,6 @@ async function update(req, res, next) {
     const article =  await ArticleModel.findById(articleId);
     const articleLikes = article.likes;
 
-    console.log(`likes: ${articleLikes}`);
-
     // if article likes array includes current user id
     if (articleLikes.includes(userId)){
         //remove this user id

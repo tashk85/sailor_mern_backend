@@ -22,6 +22,4 @@ router.post("/:articleId/likes", LikesController.update); // LikesController.upd
 router.put("/:articleId/likes", LikesController.update); // LikesController.update
 router.patch("/:articleId/likes", LikesController.update); // LikesController.update
 
-// router.post("/new", ArticleController.create); --> move to admin routes
-
 module.exports = router;

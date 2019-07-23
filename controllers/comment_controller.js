@@ -35,7 +35,8 @@ async function createComment(req, res) {
   article.comments.push({ body, user_metadata, date_posted });
   await article.save();
 
-  //   //add notification via mention to UserModel
+  //   Under Developent for future
+  //   add notification via mention to UserModel
   //   console.log(`${mention.firstName} has been mentioned`);
   //   //find the mentionee in UserModel
   //   let mentionee = await UserModel.findById(mention.mentionee_id);
@@ -56,8 +57,6 @@ async function createComment(req, res) {
 async function destroyComment(req, res) {
   let { articleId } = req.params;
   let { _id: commentId, admin } = req.body;
-  // let {_id:userId } = req.body.user;
-  // console.log(`${userId}`);
 
   // access current article and the comment array
   let article = await ArticleModel.findById(articleId);
