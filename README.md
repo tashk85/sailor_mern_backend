@@ -2,7 +2,7 @@
 ### By Alex Diwa, Alyssa FitzGerald, Leah Hou and Natasha Khatri
 
 ### App URL
-
+http://sailor-mern-leah.s3-website-ap-southeast-2.amazonaws.com/
 
 ### GitHub Repos
 - Back-End (Express): https://github.com/tashk85/sailor_mern_backend
@@ -91,7 +91,7 @@ For the tech stack on this project we are using a combination of front end and b
 
 ## Instructions on how to setup, configure, deploy and use your App
 
-To use the live app, go to https:// and set up an account.
+To use the live app, go to http://sailor-mern-leah.s3-website-ap-southeast-2.amazonaws.com/ and set up an account.
 
 For local use of the app, perform the following operations:
 
@@ -163,31 +163,31 @@ Our design process began with gathering requirements from the client, which we f
 
 ## Wireframes:
 ### Landing Page
-![Landing Page](./docs/Landing-Page.png)
+![Landing Page](./docs/wireframes/Landing-Page.png)
 
 ### Signup Page
-![Sign Up Page](./docs/Signup-Page.png)
+![Sign Up Page](./docs/wireframes/Signup-Page.png)
 
 ### Login Page
-![Login Page](./docs/Login-Page.png)
+![Login Page](./docs/wireframes/Login-Page.png)
 
 ### Interests Form
-![Interests Form](./docs/Interests-Form.png)
+![Interests Form](./docs/wireframes/Interests-Form.png)
 
 ### Feed Page
-![Feed Page](./docs/Feed-Page.png)
+![Feed Page](./docs/wireframes/Feed-Page.png)
 
 ### Individual Article
-![Individual Article Page](./docs/Individual-Article.png)
+![Individual Article Page](./docs/wireframes/Individual-Article.png)
 
 ### Profile Page
-![Profile Page](./docs/Profile-Page.png)
+![Profile Page](./docs/wireframes/Profile-Page.png)
 
 ### Notifications Page
-![Notifications Page](./docs/Notifications-Page.png)
+![Notifications Page](./docs/wireframes/Notifications-Page.png)
 
 ### Admin View - Add An Article
-![Admin View](./docs/Desktop_Admin-View.png)
+![Admin View](./docs/wireframes/Desktop_Admin-View.png)
 
 ## Database Entity Relationship Diagram:
 ![Database Schema Diagram](./docs/ODM.png)
@@ -223,8 +223,7 @@ For team communication, we had daily team meetings or standups when in class, an
 ### Client Communications
 We kept in contact with DigitalHealthX throughout the project, asking questions and providing updates and feedback. Since our communication with DHX was done remotely, we communicated with them primarily using Slack and email along with phone calls including an initial Zoom conference meeting.
 
-[Client Meeting Minutes](https://)
-[Client Slack Group Conversations](https://)
+**For Client documentation please refer to our project submission
 
 ### Screenshots of Project Management Board(s)
 
@@ -232,7 +231,10 @@ For this project, we used Monday.com's boards for project management. We split t
 
 ![Monday board screenshot - in progress](./docs/Monday_Sprint-Planning.png)
 
-![Monday board screenshot]()
+
+Towards the end of the project, we switched to using Trello boards. We based the kanban board tasks off our Monday boards format and also included user stories to clearly identify features we were aiming to incorporate into our MVP.
+
+![Trello board screenshot]()
 
 
 
