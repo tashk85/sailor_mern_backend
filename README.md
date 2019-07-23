@@ -17,7 +17,7 @@ The app aims to help a start-up – in this case, DigitalHealthX, a company in t
 
 Traditionally, a company would start their own blog to attract people who are interested in their industry. However, with the increasing number of information sources available, it's difficult to get noticed in the crowd. This app gives DigitalHealthX the platform to build an audience of people, which has content relevant to their industry. 
 
-This is achieved by sourcing articles and content through RSS Feeds, which can be sorted according to "interest tags" or keywords. The user is able to choose which interest tags they want to follow, allowing them to read all relevant content within the one application instead of needing to visit to several different sites. 
+This is achieved by sourcing articles and content through RSS Feeds, which can be sorted according to "interest tags" or keywords. The user is able to choose which interest tags they want to follow, allowing them to read all relevant content within the one application instead of needing to visit several different sites. 
 
 DigitalHealthX believes that this would be more engaging than a blog or traditional content with people facing increasing levels of digital "noise" through notifications and emails.
 
