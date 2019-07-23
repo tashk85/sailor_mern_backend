@@ -35,20 +35,20 @@ async function createComment(req, res) {
   article.comments.push({ body, user_metadata });
   await article.save();
 
-  //add notification via mention to UserModel
-  console.log(`${mention.firstName} has been mentioned`);
-  //find the mentionee in UserModel
-  let mentionee = await UserModel.findById(mention.mentionee_id);
-  //retrieve article's info from req.params
-  let mentionedArticle = {
-    mentioned_artileTitle: article.metadata.title,
-    mentioned_url: `/article/${articleId}`
-  };
-  // push commentors' & mentionedAritcle' info into notifications;
-  mentionee.notifications.push({ user_metadata, mentionedArticle });
-  await mentionee.save();
+  //   //add notification via mention to UserModel
+  //   console.log(`${mention.firstName} has been mentioned`);
+  //   //find the mentionee in UserModel
+  //   let mentionee = await UserModel.findById(mention.mentionee_id);
+  //   //retrieve article's info from req.params
+  //   let mentionedArticle = {
+  //     mentioned_artileTitle: article.metadata.title,
+  //     mentioned_url: `/article/${articleId}`
+  //   };
+  //   // push commentors' & mentionedAritcle' info into notifications;
+  //   mentionee.notifications.push({ user_metadata, mentionedArticle });
+  //   await mentionee.save();
 
-  console.log(`${mentionee}`);
+  //   console.log(`${mentionee}`);
   // res.redirect(`/article/${articleId}`);
   res.json(article.comments);
 }
