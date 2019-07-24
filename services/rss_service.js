@@ -26,14 +26,15 @@ async function fetchRSS(url) {
                     source: feed.title,
                     url: item.link,
                     image: isDHX ? item.enclosure.url : article.image,
-                    // rssCategories: item.categories,
-                    // localCategories: importCategories
                 },
                 article_body: isDHX ? item['content:encoded'] : article.content
             })
         } catch(error) {
-            console.log("***************************  Ignore if E11000: article has already been saved to database  ********************************");
-            console.log(`Error: ${error}`);
+            if (error.message.includes("E11000")){
+                console.log("***  This article already exists in the database ***");
+            } else {
+                console.log(`Error: ${error}`);
+            }
         }
         isDHX = false;
     })
