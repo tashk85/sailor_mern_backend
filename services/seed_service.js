@@ -43,7 +43,7 @@ Promise.all([...adminUserPromises, ...testUserPromises])
     })
     .catch(error => {
         if (error.message.includes("E11000")) {
-            console.log("***  Admin Users already seeded. ***");
+            console.log("*** Users already seeded. ***");
         } else {
             console.log(`Seeds file had an Error: ${error}`);
         }

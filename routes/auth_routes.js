@@ -3,7 +3,6 @@ const { celebrate, Joi } = require("celebrate");
 const passport = require("passport");
 const router = express.Router();
 const AuthController = require("./../controllers/auth_controller");
-const { authRedirect } = require("./../middleware/authorisation_middleware");
 
 // Register new user
 router.post("/signup", celebrate({

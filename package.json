@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --watch",
     "seed": "node database/seeds",
     "dev-server": "nodemon index.js",
     "server": "forever -c \"nodemon --exitcrash -L \" index.js",
@@ -15,7 +15,8 @@
   "devDependencies": {
     "forever": "^1.0.0",
     "jest": "^24.8.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "@sokratis/passport-linkedin-oauth2": "^2.1.0",
