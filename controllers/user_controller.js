@@ -46,10 +46,10 @@ async function interestsCreate(req, res, next) {
     return res.json(userInterests);
 }
 
+// API to retrieve interests for a user
 async function getUserInterests(req, res, next) {
     let { user } = req;
     let interests = user.interests;
-
     return res.json({ interests });
 }
 

@@ -220,9 +220,37 @@ For team communication, we had daily team meetings or standups when in class, an
 ![Daily Standup Notes](./docs/Daily-Standup-Tasks4.jpg)
 
 ### Client Communications
-We kept in contact with DigitalHealthX throughout the project, asking questions and providing updates and feedback. Since our communication with DHX was done remotely, we communicated with them primarily using Slack and email along with phone calls including an initial Zoom conference meeting.
+We kept in contact with DigitalHealthX ("client") throughout the project, asking questions and providing updates and feedback. Since our communication with DHX was done remotely, we communicated with them primarily using Slack and email along with phone calls including an initial Zoom conference meeting.
 
-**For Client documentation please refer to our project submission
+***Note for Coder Academy Educators: For Client documentation and evidence please refer to the /docs directories of our individual project submissions.***
+
+**Client Communications Diary**
+
+
+
+| **Date**/s        | Description                                                  | Submission Filename/s                                        |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 28/6/19 -  1/7/19 | Sailor-MERN initial contact with client explaining proposal of completing a project for them on a voluntary basis as part of our completion requirements for our Diploma of IT. | 2019-06-28-initial-contact.png, 2019-07-01-explain-reqs.png  |
+| 1/7/19            | Client emailed written proposal for project through.         | 2019-07-01-client-proposal.png                               |
+| 5/7/19            | Sailor-MERN email to client confirming interest in proceeding and organising to set up client meeting to discuss. | 2019-07-05-confirm-proceeding.png                            |
+| 8/7/19            | Sailor-MERN Zoom meeting with client discussing client requirements in more detail. | **[insert minutes filename here]**                           |
+| 9/7/19            | Sailor-MERN email to client with draft Statement of Work (SOW) and clarifying some details. | 2019-07-08-draft-sow.png                                     |
+|                   | Client email to Sailor-MERN confirming agreement to SOW with modifications. | 2019-07-09-client-sow-modifications.png                      |
+| 10/7/19           | Updated SOW emailed to client incorporating modifications.   | 2019-07-10-modified-sow.png                                  |
+|                   | SOW sign-off from client and suggestion of RSS feeds for project. | 2019-07-10-client-sign-off.png                               |
+| 10/7/19 - 15/7/19 | SOW countersigned by Sailor-MERN and discussing best method for further communications. | 2019-07-10-comms-disc.png, 2019-07-10-sow-signed.pdf         |
+| 15/7/19 - 16/7/19 | Client welcomes Sailor-MERN to their Slack channel, Sailor-MERN gives progress update. | 2019-07-15-slack-update.png                                  |
+| 16/7/19           | Discussion around LinkedIn OAuth key usage.                  | 2019-07-16-linkedin-oauth1.png, 2019-07-16-linkedin-oauth2.png, 2019-07-16-linkedin-oauth3.png |
+| 19/7/19           | Further Sailor-MERN update to client on Slack & client feedback. | 2019-07-19-further-update.png                                |
+| 22/7/19           | Provide first run of production site to client & client feedback. | 2019-07-22-initial-production.png                            |
+| 22/7/19 - 23/7/19 | Discuss RSS feeds and client concerns re. compliance with RSS feed owners' terms and conditions. | 2019-07-22-rss-disc1.png, 2019-07-22-rss-disc2.png           |
+| 23/7/19 - 24/7/19 | Provide updated production site to client and guide for user testing, client completion of user testing. | 2019-07-23-production-testing1.png, 2019-07-23-production-testing2.png, 2019-07-23-clienttesting-julian.pdf |
+|                   |                                                              |                                                              |
+|                   |                                                              |                                                              |
+|                   |                                                              |                                                              |
+|                   |                                                              |                                                              |
+
+
 
 ### Screenshots of Project Management Board(s)
 
@@ -299,8 +327,7 @@ UI/UX design skills were required for styling the application, which was further
 
 Knowledge of express middleware, JSON web tokens, Passport and Celebrate was required to implement the authentication, authorisation and validation of users accessing the application as well as associated form fields. We encountered some challenges when implementing the LinkedIn OAuth strategy with outdated documentation as well as some difficulty reaching the callback api and sending the authorisation token to the front-end. We eventually sourced a package that had updated the strategy, edited the controller method to send a redirect url with a token in the params for the front-end to extract and use for authorisation of the user.
 
-Debugging was a key skill that was crucial to overcoming technical challenges throughout the coding process as well as when deploying to production. We gained ample experience learning how to interpret error messages, and how to troubleshoot HTTP requests and methods on the front- and back-end. To deploy our site, we also required knowledge of MongoDB Atlas, Heroku and AWS S3 buckets. 
-
+Debugging was a key skill that was crucial to overcoming technical challenges throughout the coding process as well as when deploying to production. We gained ample experience learning how to interpret error messages, and how to troubleshoot HTTP requests and methods on the front- and back-end. To deploy our site, we also required knowledge of MongoDB Atlas, Heroku and AWS S3 buckets.
 
 Agile methodologies helped us plan and manage our development process. This included planning through creating user stories, creating a work scope for the client to agree on MVP, tracking our progress through use of Monday and Trello boards, collaborating with standups and team meetings, and communicating progress with the client.
 
@@ -312,4 +339,4 @@ Agile methodologies helped us plan and manage our development process. This incl
 
 - Leah -
 
-- Natasha -
+- Natasha - ""
