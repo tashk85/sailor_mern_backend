@@ -21,6 +21,12 @@ for(let i = 0; i < 2; i++) {
 
 Promise.all(adminUserPromises)
     .then(user => {
-        console.log(`Seeds file successful, created ${user.length} users`);
+        console.log(`Seeds file successful, created ${user.length} admin users`);
     })
-    .catch(err => console.log(`Seeds file had an error: ${err}`))
+    .catch(error => {
+        if (error.message.includes("E11000")) {
+            console.log("***  Admin Users already seeded. ***");
+        } else {
+            console.log(`Seeds file had an Error: ${error}`);
+        }
+    });
