@@ -25,7 +25,6 @@ async function fetchRSS(url) {
     let feed = await parser.parseURL(url);
     feed.items.forEach(async item => {        
         const articleURL = item.link;
-        console.log(generateRandomInterests());
         // We need to extract information slightly differently for the DHX feed due to its formatting
         const dhx = "https://www.digitalhx.com/feed/";
         let isDHX = false;
@@ -50,14 +49,17 @@ async function fetchRSS(url) {
         } catch(error) {
             if (error.message.includes("E11000")){
                 console.log("***  This article already exists in the database ***");
-            } else {
+            } else if( error.message.includes("article_body: Path `article_body`")){
+                console.log ("*** Article with missing content cannot be saved in database ***")
+            }
+            else {
                 console.log(`Error: ${error}`);
             }
         }
         isDHX = false;
     })
     
-    return console.log("All articles saved to database");
+    return console.log("All Articles saved to database");
 };
 
 // extract article body using embedly from article-parser

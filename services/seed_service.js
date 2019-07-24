@@ -21,6 +21,6 @@ for(let i = 0; i < 2; i++) {
 
 Promise.all(adminUserPromises)
     .then(user => {
-        console.log(`Seeds file successful, created ${user.length} users`);
+        console.log(`Seeds file successful, created ${user.length} admin users`);
     })
     .catch(err => console.log(`Seeds file had an error: ${err}`))
