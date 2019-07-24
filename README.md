@@ -2,7 +2,7 @@
 ### By Alex Diwa, Alyssa FitzGerald, Leah Hou and Natasha Khatri
 
 ### App URL
-
+http://sailor-mern-leah.s3-website-ap-southeast-2.amazonaws.com/
 
 ### GitHub Repos
 - Back-End (Express): https://github.com/tashk85/sailor_mern_backend
@@ -91,7 +91,7 @@ For the tech stack on this project we are using a combination of front end and b
 
 ## Instructions on how to setup, configure, deploy and use your App
 
-To use the live app, go to https:// and set up an account.
+To use the live app, go to http://sailor-mern-leah.s3-website-ap-southeast-2.amazonaws.com/ and set up an account.
 
 For local use of the app, perform the following operations:
 
