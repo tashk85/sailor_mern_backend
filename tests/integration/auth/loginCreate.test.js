@@ -4,7 +4,7 @@ const supertest = require("supertest");
 const app = require("../../../app");
 
 beforeAll(() => {
-    mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true });
+    mongoose.connect(process.env.DB_HOST_TEST, { useNewUrlParser: true });
     mongoose.Promise = global.Promise;
     mongoose.connection.on("error", err => console.log(err));
 });
@@ -15,16 +15,13 @@ afterAll(() => {
 });
 
 
-describe("The user signs up to app", () => {
-    test("POST /auth/signup with valid req body", async () => {
+describe("The user logs in to app", () => {
+    test("POST /auth/login with valid req body", async () => {
         const response = await supertest(app)
-            .post("/auth/signup")
+            .post("/auth/login")
             .send({
-                firstName: "Jest",
-                lastName: "Supertest",
-                email: "jest7@test.com",
-                password: "supertest",
-                admin: false
+                email: "user+1@test.com",
+                password: "usertest",
             })
             .expect(200);
 
