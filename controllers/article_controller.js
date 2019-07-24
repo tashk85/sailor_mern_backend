@@ -25,8 +25,6 @@ async function create(req, res) {
                 source: article.source,
                 url: article.url,
                 image: article.image,
-                // rssCategories: item.categories,
-                // localCategories: importCategories
             },
             article_body: article.content.replace(/<\/*html>|<\/*body>/g, "")
 
