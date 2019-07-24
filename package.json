@@ -30,6 +30,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
+    "faker": "^4.1.0",
     "forever": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",

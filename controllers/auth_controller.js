@@ -27,7 +27,6 @@ function loginCreate(req, res, next) {
 
     // get user information from request
     const { user } = req;
-    // console.log(req.user);
     
     // return token generated from user information
     const token = JWTService.generateToken(user);
@@ -39,7 +38,6 @@ function loginOAuthCreate(req, res, next) {
 
     // get user information from request
     const { user } = req;
-    // console.log(req.user);
     
     // return token generated from user information
     const token = JWTService.generateToken(user);

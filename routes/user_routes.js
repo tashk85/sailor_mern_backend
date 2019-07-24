@@ -27,7 +27,7 @@ router.delete("/:id", (req, res) => res.send("You have deleted your account")); 
 router.get("/", UserController.getCurrentUser);
 
 //User's notification
-router.get("/:userId/notifications", NotificationController.index); // see all unread notification for one user
+router.get("/notifications", NotificationController.index); // see all unread notification for one user
 router.get("/:userId/:notificationId", NotificationController.showAndDelete); // re-direct to article with mention + delete the notification if clicked
 
 
