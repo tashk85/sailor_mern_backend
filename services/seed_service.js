@@ -37,13 +37,13 @@ for(let i = 1; i <= 10; i++) {
 }
 
 
-Promise.all(adminUserPromises, testUserPromises)
+Promise.all([...adminUserPromises, ...testUserPromises])
     .then(user => {
         console.log(`Seeds file successful, created ${user.length} admin users`);
     })
     .catch(error => {
         if (error.message.includes("E11000")) {
-            console.log("***  Admin Users already seeded. ***");
+            console.log("*** Users already seeded. ***");
         } else {
             console.log(`Seeds file had an Error: ${error}`);
         }

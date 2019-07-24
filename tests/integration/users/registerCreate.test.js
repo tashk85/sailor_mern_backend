@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const supertest = require("supertest");
-const app = require("./../../../app");
+const app = require("../../../app");
 
 beforeAll(() => {
     mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true });
@@ -22,13 +22,14 @@ describe("The user signs up to app", () => {
             .send({
                 firstName: "Jest",
                 lastName: "Supertest",
-                email: "jest@test.com",
+                email: "jest7@test.com",
                 password: "supertest",
                 admin: false
             })
             .expect(200);
 
-
-        // expect(response.body).toMatch({ "token": "/^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/" });
+        expect.objectContaining({
+            token: expect.any(String)
+        });
     });
 });
