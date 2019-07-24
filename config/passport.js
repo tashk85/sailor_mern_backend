@@ -29,9 +29,11 @@ passport.use(new LocalStrategy({
         const user = await UserModel.findOne({ email })
         .catch(done);
 
+        //if no user and password doesn't match then don't authorise
         if (!user || !user.verifyPasswordSync(password)) {
         return done(null, false);
     }
+    //else if matches, return the user
     return done(null, user);
 }
 ));
@@ -75,6 +77,7 @@ passport.use(new LinkedInStrategy(
         // console.log("*****************")
         // console.log(email, firstName, lastName, avatar);
 
+        //find user by email - unique property
         let user = await UserModel.findOne({ email })
             .catch(done);
 

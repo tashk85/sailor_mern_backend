@@ -12,7 +12,6 @@ async function showProfile(req, res, next) {
         
         // retrieve articles that current user has liked from article model
         const likes = await ArticleModel.find({ likes: user._id });
-        // console.log(user, likes);
 
         return res.json({ user, likes });
     } catch (error) {
@@ -47,10 +46,10 @@ async function interestsCreate(req, res, next) {
     return res.json(userInterests);
 }
 
+// API to retrieve interests for a user
 async function getUserInterests(req, res, next) {
     let { user } = req;
     let interests = user.interests;
-    // console.log(interests, "get user interests");
     return res.json({ interests });
 }
 

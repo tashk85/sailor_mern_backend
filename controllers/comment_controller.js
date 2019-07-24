@@ -11,15 +11,11 @@ async function index(req, res, next) {
   let users = await UserModel.find({});
   let filteredUsers = [];
   users.forEach(user => {
-    let { firstName, lastName, _id: userId } = user;
-    filterdUser = { firstName, lastName, userId };
-    console.log(`is each user filtered? ${filterdUser}`);
+    let { firstName, lastName, email, _id: userId } = user;
+    filterdUser = { firstName, lastName, email, userId };
     filteredUsers.push(filterdUser);
-    console.log(`is ALL users filtered? ${filteredUsers} INSIDE loop`);
     return filteredUsers;
   });
-
-  console.log(`is ALL users filtered? ${filteredUsers} OUTSIDE loop`);
 
   return res.send({ article, filteredUsers });
 }
@@ -28,29 +24,34 @@ async function index(req, res, next) {
 async function createComment(req, res) {
   // access comments' body, user_metadata & mention info
   let { articleId } = req.params;
-  let { body, user_metadata, date_posted } = req.body;
+  let { body, user_metadata, date_posted, mentions } = req.body;
 
   //add comment to ArticleModel with commentors' info
   let article = await ArticleModel.findById(articleId);
   article.comments.push({ body, user_metadata, date_posted });
   await article.save();
 
-  //   Under Developent for future
-  //   add notification via mention to UserModel
-  //   console.log(`${mention.firstName} has been mentioned`);
-  //   //find the mentionee in UserModel
-  //   let mentionee = await UserModel.findById(mention.mentionee_id);
-  //   //retrieve article's info from req.params
-  //   let mentionedArticle = {
-  //     mentioned_artileTitle: article.metadata.title,
-  //     mentioned_url: `/article/${articleId}`
-  //   };
-  //   // push commentors' & mentionedAritcle' info into notifications;
-  //   mentionee.notifications.push({ user_metadata, mentionedArticle });
-  //   await mentionee.save();
 
-  //   console.log(`${mentionee}`);
-  // res.redirect(`/article/${articleId}`);
+  // Article Data
+    let mentionedArticle = {
+      mentioned_artileTitle: article.metadata.title,
+      mentioned_url: `/article/${articleId}`
+    };
+
+  //   add notification via mention to UserModel
+
+  //  find the mentionees in UserModel
+// push commentors' & mentionedAritcle' info into notifications;
+  mentions.taggedUsers.forEach(email => {
+    UserModel.find({ "email": email })
+      .then(mentionee => {
+        if (!mentionee[0].notifications.includes({ user_metadata, mentionedArticle })) {
+          mentionee[0].notifications.unshift({ user_metadata, mentionedArticle });
+          mentionee[0].save();
+        }
+      })
+  })
+
   res.json(article.comments);
 }
 
