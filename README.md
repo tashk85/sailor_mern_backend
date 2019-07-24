@@ -299,8 +299,7 @@ UI/UX design skills were required for styling the application, which was further
 
 Knowledge of express middleware, JSON web tokens, Passport and Celebrate was required to implement the authentication, authorisation and validation of users accessing the application as well as associated form fields. We encountered some challenges when implementing the LinkedIn OAuth strategy with outdated documentation as well as some difficulty reaching the callback api and sending the authorisation token to the front-end. We eventually sourced a package that had updated the strategy, edited the controller method to send a redirect url with a token in the params for the front-end to extract and use for authorisation of the user.
 
-Debugging was a key skill that was crucial to overcoming technical challenges throughout the coding process as well as when deploying to production. We gained ample experience learning how to interpret error messages, and how to troubleshoot HTTP requests and methods on the front- and back-end. To deploy our site, we also required knowledge of MongoDB Atlas, Heroku and AWS S3 buckets. 
-
+Debugging was a key skill that was crucial to overcoming technical challenges throughout the coding process as well as when deploying to production. We gained ample experience learning how to interpret error messages, and how to troubleshoot HTTP requests and methods on the front- and back-end. To deploy our site, we also required knowledge of MongoDB Atlas, Heroku and AWS S3 buckets.
 
 Agile methodologies helped us plan and manage our development process. This included planning through creating user stories, creating a work scope for the client to agree on MVP, tracking our progress through use of Monday and Trello boards, collaborating with standups and team meetings, and communicating progress with the client.
 
@@ -312,4 +311,4 @@ Agile methodologies helped us plan and manage our development process. This incl
 
 - Leah -
 
-- Natasha -
+- Natasha - ""
