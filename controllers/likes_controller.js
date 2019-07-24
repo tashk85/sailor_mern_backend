@@ -32,8 +32,8 @@ async function update(req, res, next) {
         // update the likes count for article
         likesCount = articleLikes.length;
       
-        console.log("added user");
-        console.log(`likes: ${articleLikes}`);
+        // console.log("added user");
+        // console.log(`likes: ${articleLikes}`);
 
         //return response to update likes boolean and count
         return res.json({ like: true, likesCount });
