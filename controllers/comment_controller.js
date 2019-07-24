@@ -13,13 +13,9 @@ async function index(req, res, next) {
   users.forEach(user => {
     let { firstName, lastName, email, _id: userId } = user;
     filterdUser = { firstName, lastName, email, userId };
-    console.log(`is each user filtered? ${filterdUser}`);
     filteredUsers.push(filterdUser);
-    console.log(`is ALL users filtered? ${filteredUsers} INSIDE loop`);
     return filteredUsers;
   });
-
-  console.log(`is ALL users filtered? ${filteredUsers} OUTSIDE loop`);
 
   return res.send({ article, filteredUsers });
 }
@@ -50,7 +46,7 @@ async function createComment(req, res) {
     UserModel.find({ "email": email })
       .then(mentionee => {
         if (!mentionee[0].notifications.includes({ user_metadata, mentionedArticle })) {
-          mentionee[0].notifications.push({ user_metadata, mentionedArticle });
+          mentionee[0].notifications.unshift({ user_metadata, mentionedArticle });
           mentionee[0].save();
         }
       })
