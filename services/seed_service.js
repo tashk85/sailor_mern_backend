@@ -37,7 +37,7 @@ for(let i = 1; i <= 10; i++) {
 }
 
 
-Promise.all(adminUserPromises, testUserPromises)
+Promise.all([...adminUserPromises, ...testUserPromises])
     .then(user => {
         console.log(`Seeds file successful, created ${user.length} admin users`);
     })
