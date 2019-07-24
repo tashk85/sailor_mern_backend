@@ -4,9 +4,8 @@ async function index(req,res,next) {
 
     console.log("I am @ ALL notifications");
     // see all notifications
-    let { userId } = req.params;
-    let user = await UserModel.findById(userId);
-    console.log(user);
+    let { user } = req;
+
     let notifications = user.notifications;
     let simple_notification = [];
 
@@ -15,10 +14,19 @@ async function index(req,res,next) {
         let mentioner_firstName = notification.user_metadata.firstName
         let mentioner_lastName = notification.user_metadata.lastName
         let mentioned_artileTitle = notification.mentionedArticle.mentioned_artileTitle;
+        let mentioned_url = notification.mentionedArticle.mentioned_url;
         let notification_id = notification._id;
-        let simple_note = [];
-        simple_note.push(mentioner_firstName, mentioner_lastName, mentioned_artileTitle, notification_id);
-        simple_notification.push(simple_note);
+        let simple_note = {
+            firstName: mentioner_firstName,
+            lastName: mentioner_lastName,
+            articleTitle: mentioned_artileTitle,
+            notificationId: notification_id,
+            url: mentioned_url
+        };
+        if (!simple_notification.includes(simple_note)) {
+            simple_notification.push(simple_note);
+        }
+        
         return simple_notification;
     });
 
