@@ -48,8 +48,11 @@ async function fetchRSS(url) {
                 interests: generateRandomInterests()
             })
         } catch(error) {
-            console.log("***************************  Ignore if E11000: article has already been saved to database  ********************************");
-            console.log(`Error: ${error}`);
+            if (error.message.includes("E11000")){
+                console.log("***  This article already exists in the database ***");
+            } else {
+                console.log(`Error: ${error}`);
+            }
         }
         isDHX = false;
     })
