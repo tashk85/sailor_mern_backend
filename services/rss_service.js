@@ -47,12 +47,11 @@ async function fetchRSS(url) {
                 interests: generateRandomInterests()
             })
         } catch(error) {
-            if (error.message.includes("E11000")){
+            if (error.message.includes("E11000")) {
                 console.log("***  This article already exists in the database ***");
-            } else if( error.message.includes("article_body: Path `article_body`")){
+            } else if (error.message.includes("article_body: Path `article_body`")) {
                 console.log ("*** Article with missing content cannot be saved in database ***")
-            }
-            else {
+            } else {
                 console.log(`Error: ${error}`);
             }
         }
