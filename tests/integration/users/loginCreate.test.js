@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const supertest = require("supertest");
-const app = require("./../../../app");
+const app = require("../../../app");
 
 beforeAll(() => {
     mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true });
