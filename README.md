@@ -138,41 +138,42 @@ Our design process began with gathering requirements from the client, which we f
 
 **General App User**
 
-1. As a user, I want to sign up and create my profile on the website using my LinkedIn account.
+- As a user, I want to sign up and create my profile on the website using my LinkedIn account.
 
-2. As a user, I want to sign up and create my profile on the website using my email.
+- As a user, I want to sign up and create my profile on the website using my email.
 
-3. As a user, I want to sign up and select my interest tags so that I can choose the content I see.
+- As a user, I want to sign up and select my interest tags so that I can choose the content I see.
 
-4. As a user, I want to view my profile so that I can see my selected interests and articles that I have liked.
+- As a user, I want to like, comment and share articles with others.
 
-5. As a user, when I sign in I want to see a curated feed of articles that match my interest tags.
+- As a user, I want to view my profile so that I can see my selected interests and articles that I have liked.
 
-6. As a user, when I sign in I want to be able to filter my feed by interest tags so that I can see stories that match a particular tag.
+- As a user, when I sign in I want to see a curated feed of articles that match my interest tags.
 
-7. As a user, I want to like, comment and share articles with others.
+- As a user, when I sign in I want to be able to filter my feed by interest tags so that I can see stories that match a particular tag.
 
-8. As a user, I want to see the number of likes on an article.
+- As a user, I want to see the number of likes on an article.
 
-9. As a user, I want to see a list of articles that I have liked.
+- As a user, I want to be able to mention other users in the comments of an article.
 
-10. As a user, I want to be able to mention other users in the comments of an article.
+- As a user, I want to receive a notification if another user mentions me in the comments of an article.
 
-11. As a user, I want to receive a notification if another user mentions me in the comments of an article.
+- As a user, I want to read articles in the app according to my screen size.
 
-12. As a user, I want to read articles in the app according to my screen size.
+- As a user, I want to receive push notifications that show me the top content related to my interest tags. (stretch goal)
 
-13. As a user, I want to receive push notifications that show me the top content related to my interest tags. (stretch goal)
+- As a user, I want to be able to change the frequency of my notifications. (stretch goal)
 
-14. As a user, I want to be able to change the frequency of my notifications. (stretch goal)
-
-15. As an administrator, I want to be able to do all functions that a general user can do.
 
 **Admin User**
 
-16. As an administrator, I want to be able to view and approve user submissions. (stretch goal)
+- As an administrator, I want to be able to do all functions that a general user can do.
 
-17. As an administrator, I want to be able to delete content including articles and comments that are inappropriate. (stretch goal)
+- As an administrator, I want to be able to add additional articles to the site.
+
+- As an administrator, I want to be able to view and approve user submissions. (stretch goal)
+
+- As an administrator, I want to be able to delete content including articles and comments that are inappropriate. (stretch goal)
 
 
 ## User Workflow Diagram:
@@ -334,7 +335,11 @@ Towards the end of the project, we switched to using Trello boards. We based the
 
 #### 3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
-The team would need to have a good understanding of web technologies including how the internet works and HTTP protocols. This would also involve having technical skills and a sound, working knowledge of HTML and CSS, testing and deploying. To be able to create a more complex and dynamic website they would need to familiar with frameworks such as Ruby on Rails or the Javascript MERN stack, which would also involve knowledge of database design. Project management and planning skills would allow the team to plan the project by dividing tasks among team members, keep on track with tasks and keep everything organised using tools such as Trello or Monday. Project planning skills also include being able to take requirements from the client and forming user stories, user work flows and wireframes. Communication skills are necessary for the team to work effectively, as they need to collaborate on tasks, share information and update team members on task progress. They would also need to communicate with the client in regards to scope of work, design approvals and to share progress of the website. It would also be advantageous for the team to have knowledge in version control using git to allow team collaboration when coding the website.
+The team would need to have a good understanding of web technologies including how the internet works and HTTP protocols. This would also involve having technical skills and a sound, working knowledge of HTML and CSS, testing and deploying. To be able to create a more complex and dynamic website they would need to familiar with frameworks such as Ruby on Rails or the Javascript MERN stack, which would also involve knowledge of database design. 
+
+Project management and planning skills would allow the team to plan the project by dividing tasks among team members, keep on track with tasks and keep everything organised using tools such as Trello or Monday. Project planning skills also include being able to take requirements from the client and forming user stories, user work flows and wireframes. 
+
+Communication skills are necessary for the team to work effectively, as they need to collaborate on tasks, share information and update team members on task progress. They would also need to communicate with the client in regards to scope of work, design approvals and to share progress of the website. It would also be advantageous for the team to have knowledge in version control using git to allow team collaboration when coding the website.
 
 
 #### 4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
