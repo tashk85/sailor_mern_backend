@@ -46,31 +46,43 @@ Users will have the ability to:
 ## Screenshots
 
 ### Landing Page
-![Landing Page](./docs/)
+![Landing Page](./docs/screenshots/Login-Page.png)
 
 ### Login Page
-![Login Page](./docs/)
+![Login Page](./docs/screenshots/Login-Page.png)
 
 ### Signup Page
-![Signup Page](./docs/)
+![Signup Page](./docs/screenshots/Signup-Page.png)
 
 ### Interests Form
-![Interests Form](./docs/)
+![Interests Form](./docs/screenshots/Interests-Form.png)
 
-### Feed Page
-![Feed Page](./docs/)
+### General Feed Page
+![Feed Page](./docs/screenshots/General-Feed-Page.png)
+
+### Curated Feed Page
+![Feed Page](./docs/screenshots/Curated-Feed-Page.png)
+
+### Filtered Feed Page
+![Feed Page](./docs/screenshots/Filtered-Feed.png)
 
 ### Individual Article
-![Individual Article](./docs/)
+![Individual Article](./docs/screenshots/Article-Page.png)
+
+### Comments on an Individual Article
+![Individual Article](./docs/screenshots/Comments.png)
+
+### Comment Mentions on an Individual Article
+![Individual Article](./docs/screenshots/Mentions.png)
 
 ### Profile Page
-![Profile Page](./docs/)
+![Profile Page](./docs/screenshots/Profile-Page.png)
 
 ### Notifications Page
-![Notifications Page](./docs/)
+![Notifications Page](./docs/screenshots/Notifications-Page.png)
 
 ### Admin View - Add An Article
-![Landing Page](./docs/)
+![Landing Page](./docs/screenshots/Add-Article-Form.png)
 
 
 ### Tech Stack
@@ -120,39 +132,48 @@ Our design process began with gathering requirements from the client, which we f
 
 ## User Stories
 
-1. As a user, I want to sign up and create my profile on the website using my LinkedIn account.
+- As a startup, I want a platform where I can show regular articles related to my industry so that I can build a client base.
 
-2. As a user, I want to sign up and create my profile on the website using my email.
+- As a general user, I want to access all articles related to a particular industry without having to visit several different websites.
 
-3. As a user, I want to sign up and select my interest tags so that I can choose the content I see.
+**General App User**
 
-4. As a user, I want to view my profile so that I can see my selected interests and articles that I have liked.
+- As a user, I want to sign up and create my profile on the website using my LinkedIn account.
 
-5. As a user, when I sign in I want to see a curated feed of articles that match my interest tags.
+- As a user, I want to sign up and create my profile on the website using my email.
 
-6. As a user, when I sign in I want to be able to filter my feed by interest tags so that I can see stories that match a particular tag.
+- As a user, I want to sign up and select my interest tags so that I can choose the content I see.
 
-7. As a user, I want to like, comment and share articles with others.
+- As a user, I want to like, comment and share articles with others.
 
-8. As a user, I want to see the number of likes on an article.
+- As a user, I want to view my profile so that I can see my selected interests and articles that I have liked.
 
-9. As a user, I want to see a list of articles that I have liked.
+- As a user, when I sign in I want to see a curated feed of articles that match my interest tags.
 
-10. As a user, I want to be able to mention other users in the comments of an article.
+- As a user, when I sign in I want to be able to filter my feed by interest tags so that I can see stories that match a particular tag.
 
-11. As a user, I want to receive a notification if another user mentions me in the comments of an article.
+- As a user, I want to see the number of likes on an article.
 
-12. As a user, I want to read articles in the app according to my screen size.
+- As a user, I want to be able to mention other users in the comments of an article.
 
-13. As a user, I want to receive push notifications that show me the top content related to my interest tags. (stretch goal)
+- As a user, I want to receive a notification if another user mentions me in the comments of an article.
 
-14. As a user, I want to be able to change the frequency of my notifications. (stretch goal)
+- As a user, I want to read articles in the app according to my screen size.
 
-15. As an administrator, I want to be able to do all functions that a general user can do.
+- As a user, I want to receive push notifications that show me the top content related to my interest tags. (stretch goal)
 
-16. As an administrator, I want to be able to view and approve user submissions. (stretch goal)
+- As a user, I want to be able to change the frequency of my notifications. (stretch goal)
 
-17. As an administrator, I want to be able to delete content including articles and comments that are inappropriate. (stretch goal)
+
+**Admin User**
+
+- As an administrator, I want to be able to do all functions that a general user can do.
+
+- As an administrator, I want to be able to add additional articles to the site.
+
+- As an administrator, I want to be able to view and approve user submissions. (stretch goal)
+
+- As an administrator, I want to be able to delete content including articles and comments that are inappropriate. (stretch goal)
 
 
 ## User Workflow Diagram:
@@ -207,9 +228,11 @@ Once we had the MVP outlined, we were able to start working on the user workflow
 
 During the planning stage, we also created kanban boards to show tasks that were required overall and also broke these down into sprints. We used agile methodologies, Monday and Trello to keep track of our progress.
 
+We assigned team roles to everyone with Alex as Tech Lead, Alyssa as Client Management, Leah as Project Management and Natasha as General Management. This reflected what we were responsible for throughout the project although we did work across areas as well.
+
 For team communication, we had daily team meetings or standups when in class, and also regularly updated team members on things over Slack. We also pair programmed for various features such as RSS Feed setup, Passport strategy setups, etc, which was a great experience as we problem solved by learning and bouncing ideas off each other.
 
-[Project Timeline / Schedule](https://docs.google.com/spreadsheets/d/1fGG65gWizXOoDz-YIhjsBX32_et9eCEjYWJCg3eeyl4/edit?usp=sharing)
+[Project Timeline / Schedule](./docs/Project-Timeline.pdf)
 
 ![Daily Standup Notes](./docs/Daily-Standup-Tasks1.jpg)
 
@@ -259,7 +282,7 @@ For this project, we used Monday.com's boards for project management. We split t
 
 Towards the end of the project, we switched to using Trello boards. We based the kanban board tasks off our Monday boards format and also included user stories to clearly identify features we were aiming to incorporate into our MVP.
 
-![Trello board screenshot]()
+![Trello board screenshot](./docs/Trello-board-completion.png)
 
 
 
@@ -312,7 +335,11 @@ Towards the end of the project, we switched to using Trello boards. We based the
 
 #### 3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
-The team would need to have a good understanding of web technologies including how the internet works and HTTP protocols. This would also involve having technical skills and a sound, working knowledge of HTML and CSS, testing and deploying. To be able to create a more complex and dynamic website they would need to familiar with frameworks such as Ruby on Rails or the Javascript MERN stack, which would also involve knowledge of database design. Project management and planning skills would allow the team to plan the project by dividing tasks among team members, keep on track with tasks and keep everything organised using tools such as Trello or Monday. Project planning skills also include being able to take requirements from the client and forming user stories, user work flows and wireframes. Communication skills are necessary for the team to work effectively, as they need to collaborate on tasks, share information and update team members on task progress. They would also need to communicate with the client in regards to scope of work, design approvals and to share progress of the website. It would also be advantageous for the team to have knowledge in version control using git to allow team collaboration when coding the website.
+The team would need to have a good understanding of web technologies including how the internet works and HTTP protocols. This would also involve having technical skills and a sound, working knowledge of HTML and CSS, testing and deploying. To be able to create a more complex and dynamic website they would need to familiar with frameworks such as Ruby on Rails or the Javascript MERN stack, which would also involve knowledge of database design. 
+
+Project management and planning skills would allow the team to plan the project by dividing tasks among team members, keep on track with tasks and keep everything organised using tools such as Trello or Monday. Project planning skills also include being able to take requirements from the client and forming user stories, user work flows and wireframes. 
+
+Communication skills are necessary for the team to work effectively, as they need to collaborate on tasks, share information and update team members on task progress. They would also need to communicate with the client in regards to scope of work, design approvals and to share progress of the website. It would also be advantageous for the team to have knowledge in version control using git to allow team collaboration when coding the website.
 
 
 #### 4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
@@ -337,4 +364,4 @@ Agile methodologies helped us plan and manage our development process. This incl
 
 - Leah -
 
-- Natasha - ""
+- Natasha - "I started off not very confident with my knowledge in using the MERN stack. However, my knowledge and skills have definitely improved and I understand how the stack works in much greater depth. My strengths were in creating documentation, and working on the back-end express server including setting up passport strategies. I learnt a lot from my team and really enjoyed pair programming for various features as this helped me to better understand the concepts behind the code we were writing, for example, the RSS feed fetching and CRON job. Although I got some exposure to setting up React and Redux, I would like learn more about how React and Redux work together. My take-aways from this project are to improve on my planning and problem solving skills, regularly implement testing using frameworks like Jest and to just keep practicing concepts that I don't understand until I do (practice makes progress)."
