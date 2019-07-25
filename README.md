@@ -46,31 +46,43 @@ Users will have the ability to:
 ## Screenshots
 
 ### Landing Page
-![Landing Page](./docs/)
+![Landing Page](./docs/screenshots/Login-Page.png)
 
 ### Login Page
-![Login Page](./docs/)
+![Login Page](./docs/screenshots/Login-Page.png)
 
 ### Signup Page
-![Signup Page](./docs/)
+![Signup Page](./docs/screenshots/Signup-Page.png)
 
 ### Interests Form
-![Interests Form](./docs/)
+![Interests Form](./docs/screenshots/Interests-Form.png)
 
-### Feed Page
-![Feed Page](./docs/)
+### General Feed Page
+![Feed Page](./docs/screenshots/General-Feed-Page.png)
+
+### Curated Feed Page
+![Feed Page](./docs/screenshots/Curated-Feed-Page.png)
+
+### Filtered Feed Page
+![Feed Page](./docs/screenshots/Filtered-Feed.png)
 
 ### Individual Article
-![Individual Article](./docs/)
+![Individual Article](./docs/screenshots/Article-Page.png)
+
+### Comments on an Individual Article
+![Individual Article](./docs/screenshots/Comments.png)
+
+### Comment Mentions on an Individual Article
+![Individual Article](./docs/screenshots/Mentions.png)
 
 ### Profile Page
-![Profile Page](./docs/)
+![Profile Page](./docs/screenshots/Profile-Page.png)
 
 ### Notifications Page
-![Notifications Page](./docs/)
+![Notifications Page](./docs/screenshots/Notifications-Page.png)
 
 ### Admin View - Add An Article
-![Landing Page](./docs/)
+![Landing Page](./docs/screenshots/Add-Article-Form.png)
 
 
 ### Tech Stack
@@ -120,6 +132,12 @@ Our design process began with gathering requirements from the client, which we f
 
 ## User Stories
 
+- As a startup, I want a platform where I can show regular articles related to my industry so that I can build a client base.
+
+- As a general user, I want to access all articles related to a particular industry without having to visit several different websites.
+
+**General App User**
+
 1. As a user, I want to sign up and create my profile on the website using my LinkedIn account.
 
 2. As a user, I want to sign up and create my profile on the website using my email.
@@ -149,6 +167,8 @@ Our design process began with gathering requirements from the client, which we f
 14. As a user, I want to be able to change the frequency of my notifications. (stretch goal)
 
 15. As an administrator, I want to be able to do all functions that a general user can do.
+
+**Admin User**
 
 16. As an administrator, I want to be able to view and approve user submissions. (stretch goal)
 
@@ -209,7 +229,7 @@ During the planning stage, we also created kanban boards to show tasks that were
 
 For team communication, we had daily team meetings or standups when in class, and also regularly updated team members on things over Slack. We also pair programmed for various features such as RSS Feed setup, Passport strategy setups, etc, which was a great experience as we problem solved by learning and bouncing ideas off each other.
 
-[Project Timeline / Schedule](https://docs.google.com/spreadsheets/d/1fGG65gWizXOoDz-YIhjsBX32_et9eCEjYWJCg3eeyl4/edit?usp=sharing)
+[Project Timeline / Schedule](./docs/Project-Timeline.pdf)
 
 ![Daily Standup Notes](./docs/Daily-Standup-Tasks1.jpg)
 
@@ -261,7 +281,7 @@ For this project, we used Monday.com's boards for project management. We split t
 
 Towards the end of the project, we switched to using Trello boards. We based the kanban board tasks off our Monday boards format and also included user stories to clearly identify features we were aiming to incorporate into our MVP.
 
-![Trello board screenshot]()
+![Trello board screenshot](./docs/Trello-board-completion.png)
 
 
 
@@ -339,4 +359,4 @@ Agile methodologies helped us plan and manage our development process. This incl
 
 - Leah -
 
-- Natasha - ""
+- Natasha - "I started off not very confident with my knowledge in using the MERN stack. However, my knowledge and skills have definitely improved and I understand how the stack works in much greater depth. My strengths were in creating documentation, and working on the back-end express server including setting up passport strategies. I learnt a lot from my team and really enjoyed pair programming for various features as this helped me to better understand the concepts behind the code we were writing, for example, the RSS feed fetching and CRON job. Although I got some exposure to setting up React and Redux, I would like learn more about how React and Redux work together. My take-aways from this project are to improve on my planning and problem solving skills, regularly implement testing using frameworks like Jest and to just keep practicing concepts that I don't understand until I do (practice makes progress)."
