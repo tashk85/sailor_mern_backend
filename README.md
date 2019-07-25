@@ -228,6 +228,8 @@ Once we had the MVP outlined, we were able to start working on the user workflow
 
 During the planning stage, we also created kanban boards to show tasks that were required overall and also broke these down into sprints. We used agile methodologies, Monday and Trello to keep track of our progress.
 
+We assigned team roles to everyone with Alex as Tech Lead, Alyssa as Client Management, Leah as Project Management and Natasha as General Management. This reflected what we were responsible for throughout the project although we did work across areas as well.
+
 For team communication, we had daily team meetings or standups when in class, and also regularly updated team members on things over Slack. We also pair programmed for various features such as RSS Feed setup, Passport strategy setups, etc, which was a great experience as we problem solved by learning and bouncing ideas off each other.
 
 [Project Timeline / Schedule](./docs/Project-Timeline.pdf)
