@@ -233,7 +233,7 @@ We kept in contact with DigitalHealthX ("client") throughout the project, asking
 | 28/6/19 -  1/7/19 | Sailor-MERN initial contact with client explaining proposal of completing a project for them on a voluntary basis as part of our completion requirements for our Diploma of IT. | 2019-06-28-initial-contact.png, 2019-07-01-explain-reqs.png  |
 | 1/7/19            | Client emailed written proposal for project through.         | 2019-07-01-client-proposal.png                               |
 | 5/7/19            | Sailor-MERN email to client confirming interest in proceeding and organising to set up client meeting to discuss. | 2019-07-05-confirm-proceeding.png                            |
-| 8/7/19            | Sailor-MERN Zoom meeting with client discussing client requirements in more detail. | **[insert minutes filename here]**                           |
+| 8/7/19            | Sailor-MERN Zoom meeting with client discussing client requirements in more detail. | 2019-07-08-zoom-minutes.pdf                                  |
 | 9/7/19            | Sailor-MERN email to client with draft Statement of Work (SOW) and clarifying some details. | 2019-07-08-draft-sow.png                                     |
 |                   | Client email to Sailor-MERN confirming agreement to SOW with modifications. | 2019-07-09-client-sow-modifications.png                      |
 | 10/7/19           | Updated SOW emailed to client incorporating modifications.   | 2019-07-10-modified-sow.png                                  |
@@ -245,10 +245,8 @@ We kept in contact with DigitalHealthX ("client") throughout the project, asking
 | 22/7/19           | Provide first run of production site to client & client feedback. | 2019-07-22-initial-production.png                            |
 | 22/7/19 - 23/7/19 | Discuss RSS feeds and client concerns re. compliance with RSS feed owners' terms and conditions. | 2019-07-22-rss-disc1.png, 2019-07-22-rss-disc2.png           |
 | 23/7/19 - 24/7/19 | Provide updated production site to client and guide for user testing, client completion of user testing. | 2019-07-23-production-testing1.png, 2019-07-23-production-testing2.png, 2019-07-23-clienttesting-julian.pdf |
-|                   |                                                              |                                                              |
-|                   |                                                              |                                                              |
-|                   |                                                              |                                                              |
-|                   |                                                              |                                                              |
+| 24/7/19 - 25/7/19 | Sent and received Client Feedback Survey and received client user testing and survey feedback. | 2019-07-25-client-feedback-survey.pdf                        |
+| 25/7/19           | Sent handover document to client                             |                                                              |
 
 
 
