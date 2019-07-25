@@ -216,7 +216,7 @@ Our design process began with gathering requirements from the client, which we f
 ![Data Flow Diagram](./docs/Data-Flow-Diagram.png)
 
 ## Object Orientated Design Documentation:
-![Object Orientated Diagram](./docs/)
+![Object Orientated Diagram](./docs/OO-diagram.png)
 
 ## Project Management & Planning
 ### Project Plan & Timeline
@@ -284,6 +284,10 @@ Towards the end of the project, we switched to using Trello boards. We based the
 
 ![Trello board screenshot](./docs/Trello-board-completion.png)
 
+
+### Overview and Description of Source Control Process
+
+Our group used Git and GitHub for source control, and GitKraken for visualisation of our workflow. Management of our version control was essential as we had to work in two different repositories corresponding to our back- and front-end codebases. At the early stages of the project, we worked off branches off a 'dev' (development) branch, which was a direct branch off the master branch. From the 'dev' branch, we created individual branches that corresponded to features we wanted to implement, or while performing testing with Jest and Cypress. Examples of these branches are: 'rss_feature', 'likes', 'comments', 'notification', 'profile', 'shares', 'linkedin-oauth'. We communicated frequently over Slack and in person to keep track with changes we had pushed and merged/pulled into dev, so that others could work on the most up-to-date code. Later on in the project when deploying, we worked directly off the master branch when making smaller changes, which were then merged and deployed immediately after discussing with the group. 
 
 
 ## Short Answer Questions
