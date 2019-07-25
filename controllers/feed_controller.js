@@ -1,6 +1,7 @@
 const ArticleModel = require("./../database/models/article_model");
 
 // API to show articles according to date posted
+// Also includes method to produce curated feed based on user interests
 async function index(req, res, next){
     const articles = await ArticleModel.find().sort({"date_posted": -1});
     const { user } = req;
@@ -8,7 +9,7 @@ async function index(req, res, next){
     if (user.interests.length === 0) {
         return res.send({ articles });
     }
-
+    // Create an object for storing curated articles according to interest tags
     let curatedArticles = {
         tag0: {
             articles: [],
@@ -26,7 +27,7 @@ async function index(req, res, next){
     };
 
     let selectedInterests = [];
-
+    // Select 3 random interests from user-selected interests
     if (user.interests.length <= 3) {
         selectedInterests = user.interests;
     } else {
@@ -37,7 +38,9 @@ async function index(req, res, next){
             }
         }
     }
-
+    // Iterate through articles, and if article corresponds to the interest, add to curated object
+    // This will put top 3 most recent articles corresponding to each category/interest,
+    // and send all articles back as well as the curatedArticles object
     articles.forEach(article => {
         selectedInterests.forEach((interest, i) => {
             if (article.interests.includes(interest) && !curatedArticles.tag0.articles.includes(article) && !curatedArticles.tag1.articles.includes(article) && !curatedArticles.tag2.articles.includes(article) && curatedArticles[`tag${i}`].articles.length < 3) {
@@ -53,7 +56,7 @@ async function index(req, res, next){
 
     return res.send({ articles, curatedArticles });
 }
-
+// Find articles in database that correspond to a particular interest tag pulled of front-end params
 async function showArticlesByInterest(req, res, next) {
     const { interest } = req.params;
     const interestTag = interest.replace("-", " ");

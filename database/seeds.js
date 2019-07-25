@@ -1,3 +1,6 @@
+// This file was used during developent to seed database by running a script
+// Now, seeding database is built in with starting the server (see seeds_service.js in services directory)
+
 require("dotenv").config();
 const mongoose = require("./connect");
 const UserModel = require("./models/user_model");

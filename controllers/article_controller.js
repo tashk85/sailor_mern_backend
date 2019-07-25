@@ -6,12 +6,13 @@ const { extract } = require("article-parser");
 // API to show individual article
 async function show(req, res, next) {
     let { id } = req.params;
-    //find the article
+    // find the article in database, and send to front end
     let article = await ArticleModel.findById(id);
     return res.send({ article });
 }
 
 // API to add an article - available only to admin users
+// article_body entry needs to be modified to remove html and body tags prior to saving in database
 async function create(req, res) {
     const { url } = req.body;
 

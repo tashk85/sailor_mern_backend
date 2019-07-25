@@ -18,7 +18,7 @@ for(let i = 1; i <= 2; i++) {
     adminUserPromises.push(setUpAdminUser(i));
     console.log(`Created admin ${i}`);
 }
-
+// Seed Test users
 const testUserPromises = [];
 function setUpTestUser(i) {
     
@@ -36,7 +36,7 @@ for(let i = 1; i <= 10; i++) {
     console.log(`Created user ${i}`);
 }
 
-
+// Combine into an array of promises to handle
 Promise.all([...adminUserPromises, ...testUserPromises])
     .then(user => {
         console.log(`Seeds file successful, created ${user.length} admin users`);
