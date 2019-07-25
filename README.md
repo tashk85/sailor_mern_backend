@@ -109,7 +109,7 @@ To use the live app, go to http://sailor-mern-leah.s3-website-ap-southeast-2.ama
 For local use of the app, perform the following operations:
 
 **Express Server:**
-- From a bash CLI, clone the back-end git repository locally: git clone https://github.com/tashk85/sailor_mern_backend.git
+- From a bash CLI, clone the back-end git repository locally: `git clone https://github.com/tashk85/sailor_mern_backend.git`
 - Move into the directory: `cd sailor_mern_backend`
 - Install npm packages: `npm install` or `yarn install`
 - Ensure mongoDB is running
@@ -117,12 +117,12 @@ For local use of the app, perform the following operations:
 - Start the server: `npm run server`
 
 **React App:**
-- From a bash CLI, clone the front-end git repository locally: git clone https://github.com/lyssfitz/sailor_mern_frontend.git
+- From a bash CLI, clone the front-end git repository locally: `git clone https://github.com/lyssfitz/sailor_mern_frontend.git`
 - Move into the directory: `cd sailor_mern_backend`
 - Install npm packages: `npm install` or `yarn install`
 - Create a .env file in the root directory with variable REACT_APP_API_URL set to your node server URL http://localhost:3000.
 - Start the server: `npm start` or `yarn start`, when prompted to change port say yes (Y).
-- This will automatically open up the application in your browser, if not, go to http://localhost:3000
+- This will automatically open up the application in your browser, if not, go to http://localhost:3001
 - Enjoy!
 
 
@@ -365,7 +365,5 @@ Agile methodologies helped us plan and manage our development process. This incl
 - Alex - "I have a good working knowledge of the technical aspects of building an app, and I helped guide our team on both the front- and back-end. I am stronger on the front-end and led the React component design and implementation, for example, for the curated feed and article pages. My weaknesses are in planning, prioritising and documentation, and thankfully I had supportive team members who could learn from and who could guide me in other aspects throughout the project timeline. For future projects, I could benefit from being better at time management, having a more in-depth understanding of the the component lifecycle and making my code cleaner, more efficient and performant."
 
 - Alyssa -"I felt that my strengths in the project were in leading the team's interactions with the client and ensuring as best as I could that we were building the project in line with the client's preferences. I am still enjoying a learning curve with the technical aspects of the project and spent quite a lot of time researching and considering the best way to organise the technical aspects that had been assigned to me such as working with React on the front-end to build the comments components. After some research I felt that I started to get a good process down with using a couple of different tools for testing but given the time limit and scope of the project I wasn't able to develop this as fully as I would have liked. It was also a great challenge to work on the LinkedIn OAuth on the back-end and expand my knowledge of implementing OAuth beyond what we learned in class. In the future I think I would benefit from thinking in more detail earlier in the process how I am going to link the front-end components to the back-end."
-
-- Leah -
 
 - Natasha - "I started off not very confident with my knowledge in using the MERN stack. However, my knowledge and skills have definitely improved and I understand how the stack works in much greater depth. My strengths were in creating documentation, and working on the back-end express server including setting up passport strategies. I learnt a lot from my team and really enjoyed pair programming for various features as this helped me to better understand the concepts behind the code we were writing, for example, the RSS feed fetching and CRON job. Although I got some exposure to setting up React and Redux, I would like learn more about how React and Redux work together. My take-aways from this project are to improve on my planning and problem solving skills, regularly implement testing using frameworks like Jest and to just keep practicing concepts that I don't understand until I do (practice makes progress)."
