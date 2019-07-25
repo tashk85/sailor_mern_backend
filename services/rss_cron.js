@@ -1,6 +1,6 @@
 const { CronJob } = require("cron");
 const rssService = require("./../services/rss_service");
-
+// Feeds that our app pulls from:
 const feeds = [
   "https://medcitynews.com/feed/", 
   "https://www.digitalhx.com/feed/", 
@@ -11,7 +11,6 @@ const feeds = [
 feeds.forEach(feed => rssService.fetchRSS(feed));
 
 // */2 -> triggers every 2 hours
-// Midnight: "00 00 00 * * *";
 const job = new CronJob('0 0 */2 * * *', function() {
   console.log("*** CRON is running ***")
   feeds.forEach(feed => rssService.fetchRSS(feed));

@@ -10,6 +10,5 @@ router.get("/", FeedController.index); // FeedController.index
 
 // Filter Feed by Interest
 router.get("/:interest", FeedController.showArticlesByInterest); 
-// :interest will be a string interpolation of interest tags from user
 
 module.exports = router;
