@@ -11,11 +11,11 @@ const feeds = [
 feeds.forEach(feed => rssService.fetchRSS(feed));
 
 // */2 -> triggers every 2 hours
-const job = new CronJob('0 0 */2 * * *', function() {
-  console.log("*** CRON is running ***")
-  feeds.forEach(feed => rssService.fetchRSS(feed));
-  const d = new Date();
-  console.log("All articles fetched CRON ", d);
-})
+// const job = new CronJob('0 0 */2 * * *', function() {
+//   console.log("*** CRON is running ***")
+//   feeds.forEach(feed => rssService.fetchRSS(feed));
+//   const d = new Date();
+//   console.log("All articles fetched CRON ", d);
+// })
 
-job.start();
+// job.start();
