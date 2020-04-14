@@ -1,5 +1,4 @@
 const express = require("express");
-const exphbs = require("express-handlebars");
 const morgan = require("morgan");
 const expressSession = require("express-session");
 const MongoStore = require('connect-mongo')(expressSession);
